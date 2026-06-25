@@ -180,7 +180,7 @@
     /* FOOTER */
     footer{background:#070e1f;color:rgba(255,255,255,.5);padding:40px 24px 20px}
     .footer-inner{max-width:1200px;margin:0 auto}
-    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr;gap:32px;margin-bottom:32px}
     .footer-brand .b{font-size:1.05rem;font-weight:800;color:var(--white)}
     .footer-brand .t{font-size:.68rem;color:var(--orange);margin-bottom:10px;letter-spacing:1px}
     .footer-brand p{font-size:.8rem;line-height:1.65;max-width:240px}
@@ -267,7 +267,7 @@
             <div class="nd-icon orange">🏢</div>
             <div class="nd-info">
               <div class="nd-title">Pack Bureau de Contrôle</div>
-              <div class="nd-sub">1 semaine intensive – VGP + Micro-entreprise</div>
+              <div class="nd-sub">1 semaine intensive – Micro-entreprise + VGP</div>
             </div>
           </a>
         </div>
@@ -311,7 +311,7 @@
           <a href="formation-cqp.html" class="hp-form-item" style="text-decoration:none">
             <span class="hp-form-icon">🔧</span>
             <div>
-              <div class="hp-form-name">CQP Agent de maintenance</div>
+              <div class="hp-form-name">CQP Agent de maintenance de matériel de manutention et levage</div>
               <div class="hp-form-sub">15 jours · Éligible CPF</div>
             </div>
           </a>
@@ -536,23 +536,6 @@
           <li><a href="formation-pack.html">Pack Bureau de Contrôle</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Liens utiles</h4>
-        <ul>
-          <li><a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer">Mon Compte Formation</a></li>
-          <li><a href="https://www.francecompetences.fr/recherche/rncp/41332/" target="_blank" rel="noopener noreferrer">Fiche RNCP41332</a></li>
-          <li><a href="Certificat_Qualiopi_FormationVGP.pdf" download>Certificat Qualiopi</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Légal</h4>
-        <ul>
-          <li><a href="#">Mentions légales</a></li>
-          <li><a href="#">CGV</a></li>
-          <li><a href="#">Confidentialité</a></li>
-          <li><a href="#">Règlement intérieur</a></li>
-        </ul>
-      </div>
     </div>
     <div class="footer-bottom">
       <p>© 2025 Formation VGP – SASU au capital de 5 000 € – SIRET : 928 123 496 00020 – TVA : FR50928123496 – Code APE : 85.59A – RCS Nîmes</p>
@@ -575,7 +558,7 @@
   document.querySelector('.contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     const btn = this.querySelector('.form-submit');
-    btn.textContent = '✓ Message envoyé – réponse sous 24h';
+    btn.textContent = '✓ Message envoyé – nous vous répondrons rapidement';
     btn.style.background = '#059669';
     btn.disabled = true;
   });
