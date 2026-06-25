@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pack Bureau de Contrôle – Lancez votre bureau de contrôle VGP en 1 semaine intensive. Formation Vérificateur VGP + Micro-entreprise RS 7005. CPF éligible jusqu'à 1 500 €. Formation VGP.">
+  <title>Pack Bureau de Contrôle – 1 semaine intensive – Formation VGP</title>
+  <style>
+    :root{--blue-dark:#0f2050;--blue-main:#1a3a7c;--blue-light:#2563eb;--orange:#f59e0b;--orange-dark:#d97706;--white:#ffffff;--grey-bg:#f8fafc;--grey-mid:#94a3b8;--grey-dark:#334155;--text:#1e293b;--border:#e2e8f0;--radius:8px;--shadow:0 2px 16px rgba(15,32,80,.08)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Segoe UI',system-ui,sans-serif;color:var(--text);line-height:1.65;background:var(--white);font-size:15px}
+    .skip{position:absolute;top:-100%;left:0;background:var(--orange);color:var(--blue-dark);padding:10px 18px;font-weight:700;z-index:9999;text-decoration:none}
+    .skip:focus{top:0}
+    .access-bar{background:var(--blue-dark);color:rgba(255,255,255,.65);font-size:.76rem;padding:6px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+    .access-bar a{color:var(--orange);text-decoration:none}
+    header{position:sticky;top:0;z-index:1000;background:var(--white);box-shadow:0 1px 10px rgba(15,32,80,.09)}
+    nav{max-width:1200px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
+    .logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .logo-icon{width:44px;height:44px;flex-shrink:0}
+    .logo-text .brand{font-size:1.15rem;font-weight:800;color:var(--blue-dark);line-height:1}
+    .logo-text .tagline{font-size:.62rem;font-weight:600;color:var(--blue-light);letter-spacing:1px;text-transform:uppercase}
+    .nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+    .nav-links a{text-decoration:none;color:var(--grey-dark);font-weight:600;font-size:.86rem;transition:color .2s}
+    .nav-links a:hover{color:var(--blue-light)}
+    .nav-cta{background:var(--orange)!important;color:var(--blue-dark)!important;padding:9px 20px;border-radius:var(--radius);font-weight:700!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}
+    .hamburger span{display:block;width:25px;height:3px;background:var(--blue-dark);border-radius:2px}
+    .nav-item-dropdown{position:relative;padding-bottom:10px}
+    .nav-item-dropdown>a{display:flex;align-items:center;gap:5px}
+    .nav-item-dropdown>a::after{content:'▾';font-size:.65rem;margin-top:1px}
+    .nav-dropdown{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--white);border-radius:10px;box-shadow:0 8px 28px rgba(15,32,80,.15);min-width:280px;padding:8px 0;z-index:200;border:1px solid var(--border)}
+    .nav-item-dropdown:hover .nav-dropdown,.nav-item-dropdown:focus-within .nav-dropdown{display:block}
+    .nav-dropdown a{display:flex;align-items:center;gap:10px;padding:11px 18px;font-size:.85rem;color:var(--grey-dark);border-bottom:1px solid var(--border);transition:background .15s}
+    .nav-dropdown a:last-child{border-bottom:none}
+    .nav-dropdown a:hover{background:var(--grey-bg);color:var(--blue-light)}
+    .nd-icon{width:32px;height:32px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+    .nd-icon.blue{background:rgba(37,99,235,.1)}
+    .nd-icon.orange{background:rgba(245,158,11,.12)}
+    .nd-info .nd-title{font-weight:700;font-size:.84rem;color:var(--blue-dark)}
+    .nd-info .nd-sub{font-size:.72rem;color:var(--grey-mid);margin-top:1px}
+    .nd-badge{font-size:.65rem;background:var(--orange);color:var(--blue-dark);border-radius:4px;padding:2px 6px;font-weight:800;margin-left:auto;white-space:nowrap}
+    .nd-badge.nc{background:var(--grey-bg);color:var(--grey-dark);border:1px solid var(--border)}
+    /* HERO */
+    .hero{background:linear-gradient(135deg,#7c2d12 0%,#b45309 50%,#d97706 100%);color:var(--white);padding:72px 24px 56px;position:relative;overflow:hidden}
+    .hero::after{content:'';position:absolute;bottom:-80px;left:-80px;width:360px;height:360px;background:radial-gradient(circle,rgba(255,255,255,.06) 0%,transparent 70%);pointer-events:none}
+    .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:center;position:relative;z-index:1}
+    .hero h1{font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:900;line-height:1.15;margin-bottom:12px;color:var(--white)}
+    .hero h1 em{font-style:normal;color:rgba(255,255,255,.9);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3)}
+    .hero-sub{font-size:.95rem;opacity:.88;margin-bottom:24px;max-width:500px;line-height:1.7}
+    .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:#92400e;padding:12px 26px;border-radius:var(--radius);font-weight:800;font-size:.92rem;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.15);transition:transform .2s}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-secondary{display:inline-flex;align-items:center;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.4);color:var(--white);padding:10px 22px;border-radius:var(--radius);font-weight:700;font-size:.92rem;text-decoration:none}
+    .hero-card{background:#0f2050;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:28px;box-shadow:0 8px 32px rgba(0,0,0,.25)}
+    .hero-card-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--orange);margin-bottom:16px}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+    .hero-stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:9px;padding:12px;text-align:center}
+    .hero-stat .n{font-size:1.65rem;font-weight:900;color:var(--orange);line-height:1}
+    .hero-stat .l{font-size:.68rem;opacity:.7;margin-top:3px;color:rgba(255,255,255,.8)}
+    .pack-tag{background:rgba(37,99,235,.25);border:1px solid rgba(37,99,235,.4);border-radius:9px;padding:12px 16px}
+    .pack-tag .code{font-size:.85rem;font-weight:800;color:var(--orange)}
+    .pack-tag .desc{font-size:.76rem;opacity:.75;margin-top:4px;color:rgba(255,255,255,.8)}
+    /* SECTIONS */
+    section{padding:64px 24px}
+    .section-inner{max-width:1200px;margin:0 auto}
+    .section-label{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue-light);margin-bottom:6px}
+    h2{font-size:clamp(1.4rem,2vw,2rem);font-weight:800;color:var(--blue-dark);line-height:1.2;margin-bottom:10px}
+    .section-sub{font-size:.92rem;color:var(--grey-dark);max-width:640px;margin-bottom:36px;line-height:1.7}
+    /* CERTIF LAYOUT */
+    .programme-label{display:flex;align-items:center;gap:10px;margin-bottom:28px}
+    .prog-arrow{width:28px;height:28px;background:var(--orange);clip-path:polygon(0 0,70% 0,100% 50%,70% 100%,0 100%,30% 50%)}
+    .prog-tag{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#92400e}
+    .certif-layout{display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:start}
+    .info-sidebar{background:var(--white);border-radius:12px;padding:24px;box-shadow:var(--shadow);position:sticky;top:88px}
+    .info-sidebar-title{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#92400e;border-bottom:2px solid var(--orange);padding-bottom:8px;margin-bottom:18px}
+    .info-block{margin-bottom:18px}
+    .info-block:last-child{margin-bottom:0}
+    .info-block .ib-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--blue-dark);margin-bottom:5px}
+    .info-block .ib-val{font-size:.86rem;color:var(--grey-dark);line-height:1.6}
+    .info-block .ib-val strong{color:var(--blue-dark)}
+    /* PACK HEADER */
+    .pack-header{background:linear-gradient(135deg,#7c2d12,#b45309,#d97706);color:var(--white);border-radius:12px 12px 0 0;padding:28px 32px}
+    .pack-rs{font-size:.78rem;font-weight:700;color:rgba(255,255,255,.7);margin-bottom:4px}
+    .pack-title{font-size:1.45rem;font-weight:900;line-height:1.2;margin:8px 0 10px}
+    .pack-desc{font-size:.88rem;opacity:.85;border-top:1px solid rgba(255,255,255,.2);padding-top:14px;margin-top:14px}
+    .pack-metas{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px}
+    .pack-meta{font-size:.8rem;opacity:.8;display:flex;align-items:center;gap:6px}
+    .pack-meta::before{content:'●';color:rgba(255,255,255,.6);font-size:.5rem}
+    .pack-content{background:var(--white);border:1px solid var(--border);border-top:none;border-radius:0 0 12px 12px;padding:32px}
+    .fm-section-title{font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:#92400e;margin:28px 0 14px;border-bottom:2px solid var(--orange);padding-bottom:6px}
+    .fm-section-title:first-child{margin-top:0}
+    .obj-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:4px}
+    .obj-list li{display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:var(--grey-dark)}
+    .obj-list li::before{content:'⊙';color:var(--orange);font-size:1rem;flex-shrink:0;line-height:1.5}
+    .prog-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .prog-list li{display:flex;align-items:flex-start;gap:9px;font-size:.88rem;color:var(--grey-dark)}
+    .prog-list li::before{content:'•';color:var(--orange);font-weight:900;font-size:1.1rem;flex-shrink:0;line-height:1.4}
+    .pack-sub-formation{border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:18px}
+    .pack-sub-header{padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .pack-sub-header.blue{background:linear-gradient(135deg,var(--blue-dark),var(--blue-main))}
+    .pack-sub-header.orange{background:linear-gradient(135deg,#78350f,#b45309)}
+    .pack-sub-title{font-size:.95rem;font-weight:800;color:var(--white)}
+    .pack-sub-badge{font-size:.7rem;font-weight:800;padding:4px 10px;border-radius:99px;white-space:nowrap}
+    .pack-sub-badge.cpf{background:var(--orange);color:var(--blue-dark)}
+    .pack-sub-badge.nc{background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.3)}
+    .pack-sub-body{padding:18px 20px}
+    .pack-sub-meta{display:flex;gap:14px;margin-bottom:12px;flex-wrap:wrap}
+    .pack-sub-meta span{font-size:.78rem;color:var(--grey-mid);display:flex;align-items:center;gap:5px}
+    .pack-sub-meta span::before{content:'◾';font-size:.5rem;color:var(--orange)}
+    .pack-warning{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);border-radius:8px;padding:12px 16px;font-size:.84rem;color:#92400e;margin-top:10px;display:flex;gap:8px;align-items:flex-start}
+    .pack-budget{background:var(--blue-dark);color:var(--white);border-radius:10px;padding:24px 28px;margin-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+    .pb-total{font-size:2.2rem;font-weight:900;color:var(--orange);line-height:1}
+    .pb-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;opacity:.7;margin-bottom:4px}
+    .pb-detail{font-size:.83rem;opacity:.78;line-height:1.8}
+    .result-strip{background:linear-gradient(135deg,#7c2d12,#b45309);color:var(--white);border-radius:9px;padding:18px 22px;margin-top:24px}
+    .result-strip .rl{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.75);margin-bottom:6px}
+    .result-strip p{font-size:.88rem;opacity:.9;line-height:1.7}
+    /* QUALIOPI STRIP */
+    .qualiopi-strip{background:var(--blue-dark);color:var(--white);border-radius:12px;padding:20px 28px;display:flex;align-items:center;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+    .qs-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+    .qs-mark{width:42px;height:42px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:900;color:var(--blue-dark);text-align:center;line-height:1.1;flex-shrink:0}
+    .qs-name{font-size:1rem;font-weight:800;letter-spacing:1px}
+    .qs-divider{width:1px;height:36px;background:rgba(255,255,255,.2)}
+    .qs-text{font-size:.84rem;opacity:.85}
+    /* FINANCEMENT */
+    #financement{background:var(--grey-bg)}
+    .fin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .fin-card{background:var(--white);border-radius:11px;padding:22px;box-shadow:var(--shadow);border-top:3px solid var(--orange)}
+    .fin-card h3{font-size:.9rem;font-weight:700;color:var(--blue-dark);margin-bottom:8px}
+    .fin-card p{font-size:.84rem;color:var(--grey-dark);line-height:1.65}
+    .fin-card a{color:var(--blue-light);text-decoration:none}
+    /* CONTACT */
+    #contact{background:linear-gradient(135deg,var(--blue-dark),var(--blue-main));color:var(--white)}
+    #contact h2{color:var(--white)}
+    #contact .section-sub{color:rgba(255,255,255,.75)}
+    .contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+    .contact-form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:28px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .form-group{margin-bottom:14px}
+    .form-group label{display:block;font-size:.8rem;font-weight:600;margin-bottom:5px;color:rgba(255,255,255,.82)}
+    .form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:10px 13px;color:var(--white);font-size:.9rem;font-family:inherit}
+    .form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.35)}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--orange)}
+    .form-group select option{background:var(--blue-dark)}
+    .form-group textarea{resize:vertical;min-height:90px}
+    .form-rgpd{font-size:.74rem;color:rgba(255,255,255,.48);margin-bottom:14px}
+    .form-submit{width:100%;background:var(--orange);color:var(--blue-dark);border:none;padding:13px;border-radius:var(--radius);font-weight:800;font-size:.92rem;cursor:pointer;font-family:inherit}
+    .contact-infos{display:flex;flex-direction:column;gap:18px}
+    .ci-item{display:flex;gap:13px}
+    .ci-icon{width:40px;height:40px;background:rgba(245,158,11,.13);border:1px solid rgba(245,158,11,.28);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+    .ci-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:2px}
+    .ci-val{font-size:.88rem;color:rgba(255,255,255,.86)}
+    .ci-val a{color:rgba(255,255,255,.86);text-decoration:none}
+    /* FOOTER */
+    footer{background:#070e1f;color:rgba(255,255,255,.5);padding:40px 24px 20px}
+    .footer-inner{max-width:1200px;margin:0 auto}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}
+    .footer-brand .b{font-size:1.05rem;font-weight:800;color:var(--white)}
+    .footer-brand .t{font-size:.68rem;color:var(--orange);margin-bottom:10px;letter-spacing:1px}
+    .footer-brand p{font-size:.8rem;line-height:1.65;max-width:240px}
+    .footer-col h4{font-size:.74rem;font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+    .footer-col ul a{font-size:.82rem;color:rgba(255,255,255,.5);text-decoration:none}
+    .footer-col ul a:hover{color:var(--orange)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.74rem}
+    .footer-bottom a{color:rgba(255,255,255,.4);text-decoration:none}
+    .footer-qualiopi{text-align:right;font-size:.73rem;line-height:1.7}
+    .footer-qualiopi a{color:var(--orange)}
+    :focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:4px}
+    /* ORGANISATION */
+    .org-layout{display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:start}
+    .org-sidebar{display:flex;flex-direction:column;gap:20px}
+    .org-photo{background:linear-gradient(160deg,var(--blue-dark),var(--blue-main));border-radius:12px;height:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center;color:var(--white)}
+    .org-photo .op-icon{font-size:2.6rem;margin-bottom:8px}
+    .org-photo p{font-size:.82rem;opacity:.8}
+    .org-stats{background:var(--grey-bg);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:14px}
+    .os-item{display:flex;flex-direction:column;gap:2px}
+    .os-num{font-size:2rem;font-weight:900;color:var(--text);line-height:1;letter-spacing:-1px}
+    .os-line{width:32px;height:2px;background:var(--orange);margin:5px 0}
+    .os-label{font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--grey-dark);line-height:1.4}
+    .os-divider{height:1px;background:var(--border)}
+    .org-main{background:var(--grey-bg);border-radius:12px;padding:32px}
+    .org-section{margin-bottom:26px}
+    .org-section:last-child{margin-bottom:0}
+    .org-title{font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--blue-main);margin-bottom:10px;border-bottom:2px solid var(--blue-light);padding-bottom:6px}
+    .org-text{font-size:.88rem;color:var(--grey-dark);line-height:1.7;margin-bottom:0}
+    .org-list{list-style:none;display:flex;flex-direction:column;gap:8px;padding:0;margin:0}
+    .org-list li{font-size:.87rem;color:var(--grey-dark);display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+    .org-list li::before{content:'→';color:var(--orange);font-weight:700;flex-shrink:0}
+    .delay-box{background:var(--white);border-left:4px solid var(--orange);border-radius:0 8px 8px 0;padding:14px 18px;font-size:.88rem;color:var(--grey-dark);line-height:1.7}
+    /* COMPÉTENCES */
+    .blocs-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}
+    .bloc-card{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+    .bloc-header{padding:20px 24px}
+    .bloc-header.bc01{background:linear-gradient(135deg,var(--blue-dark),var(--blue-main));color:var(--white)}
+    .bloc-header.bc02{background:linear-gradient(135deg,#7c2d12,#b45309);color:var(--white)}
+    .bloc-code{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.7);margin-bottom:4px}
+    .bloc-header h3{font-size:.95rem;font-weight:800;color:var(--white);line-height:1.3}
+    .bloc-body{padding:20px 24px;display:flex;flex-direction:column;gap:10px}
+    .comp-item{font-size:.86rem;color:var(--grey-dark);display:flex;align-items:flex-start;gap:10px;line-height:1.5}
+    .comp-item::before{content:'✓';color:var(--blue-light);font-weight:700;flex-shrink:0}
+    @media(max-width:1024px){
+      .hero-inner{grid-template-columns:1fr}
+      .hero-card{max-width:400px}
+      .certif-layout{grid-template-columns:1fr}
+      .info-sidebar{position:static}
+      .footer-top{grid-template-columns:1fr 1fr}
+      .fin-grid,.contact-layout,.org-layout,.blocs-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:768px){
+      section{padding:48px 20px}
+      .hero{padding:56px 20px 44px}
+      .form-row{grid-template-columns:1fr}
+      .footer-top{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+      .footer-qualiopi{text-align:left}
+      .nav-links{display:none;flex-direction:column;gap:0;position:absolute;top:68px;left:0;right:0;background:white;box-shadow:0 8px 20px rgba(0,0,0,.1);padding:10px 0}
+      .nav-links.open{display:flex}
+      .nav-links li{padding:0 20px}
+      .nav-links a{display:block;padding:10px 0;border-bottom:1px solid #f1f5f9}
+      .hamburger{display:flex}
+      nav{position:relative}
+      .pack-budget{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip">Aller au contenu principal</a>
+
+<div class="access-bar">
+  <span>✉ <a href="mailto:contact@formation-vgp.com">contact@formation-vgp.com</a> &nbsp;|&nbsp; Certifié Qualiopi · CPF partiel éligible</span>
+</div>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo-wrap" aria-label="Formation VGP – Accueil">
+      <svg class="logo-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0f2050"/><stop offset="100%" style="stop-color:#2563eb"/></linearGradient></defs>
+        <path d="M24 2 L43 13 L43 35 L24 46 L5 35 L5 13 Z" fill="url(#lg)"/>
+        <rect x="21" y="14" width="4" height="20" fill="white" rx="1"/>
+        <rect x="14" y="14" width="18" height="3" fill="white" rx="1.5"/>
+        <rect x="14" y="14" width="4" height="5" fill="#f59e0b" rx="1"/>
+        <line x1="27" y1="17" x2="27" y2="27" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M25 27 Q25 31 28 31 Q31 31 31 28" stroke="#f59e0b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <rect x="19" y="34" width="8" height="2" fill="white" rx="1"/>
+      </svg>
+      <div class="logo-text">
+        <span class="brand">Formation VGP</span>
+        <span class="tagline">Certifié Qualiopi</span>
+      </div>
+    </a>
+
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li class="nav-item-dropdown">
+        <a href="index.html#nos-formations">Nos formations</a>
+        <div class="nav-dropdown">
+          <a href="formation-cqp.html">
+            <div class="nd-icon blue">🔧</div>
+            <div class="nd-info">
+              <div class="nd-title">CQP Agent de maintenance</div>
+              <div class="nd-sub">Manutention / Levage – RNCP41332</div>
+            </div>
+          </a>
+          <a href="formation-pack.html">
+            <div class="nd-icon orange">🏢</div>
+            <div class="nd-info">
+              <div class="nd-title">Pack Bureau de Contrôle</div>
+              <div class="nd-sub">1 semaine intensive – VGP + Micro-entreprise</div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li><a href="#formation">Programme</a></li>
+      <li><a href="#organisation">Organisation</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#financement">Financement</a></li>
+      <li><a href="#contact" class="nav-cta">Nous contacter</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO PACK -->
+  <section class="hero" aria-label="Présentation du Pack Bureau de Contrôle">
+    <div class="hero-inner">
+      <div>
+        <h1>
+          <span style="display:block;font-size:1.1em;font-weight:900;color:rgba(255,255,255,.95);text-shadow:0 2px 18px rgba(255,255,255,.2);letter-spacing:1px;margin-bottom:4px;">Devenez</span>
+          vérificateur VGP et lancez<br>votre <em>bureau de contrôle</em>
+        </h1>
+        <p class="hero-sub">En seulement 1 semaine intensive, acquérez les bases essentielles pour démarrer votre activité. Deux formations combinées : Vérificateur VGP complète + Création de micro-entreprise (CPF).</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Demander des informations</a>
+          <a href="#formation" class="btn-secondary">Voir le programme</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-title">Pack en un coup d'œil</div>
+        <div class="hero-grid">
+          <div class="hero-stat"><div class="n">42h</div><div class="l">Durée totale</div></div>
+          <div class="hero-stat"><div class="n">1 sem.</div><div class="l">Intensive</div></div>
+          <div class="hero-stat"><div class="n">1 950€</div><div class="l">Budget total</div></div>
+          <div class="hero-stat"><div class="n">CPF</div><div class="l">Jusqu'à 1 500€</div></div>
+        </div>
+        <div class="pack-tag">
+          <div class="code">2 formations · 1 semaine · 1 objectif</div>
+          <div class="desc">VGP Vérificateur + Micro-entreprise RS 7005</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMATION DÉTAILLÉE -->
+  <section id="formation" style="background:var(--grey-bg);" aria-labelledby="pack-title">
+    <div class="section-inner">
+
+      <div class="qualiopi-strip">
+        <div class="qs-logo">
+          <div class="qs-mark">QUALI<br>OPI</div>
+          <span class="qs-name">QUALIOPI</span>
+        </div>
+        <div class="qs-divider"></div>
+        <p class="qs-text">Organisme certifié Qualiopi pour les <strong>Actions de formation</strong>. Condition d'accès aux financements CPF, OPCO, France Travail. <a href="Certificat_Qualiopi_FormationVGP.pdf" download style="color:var(--orange)">Télécharger le certificat →</a></p>
+      </div>
+
+      <div class="programme-label">
+        <div class="prog-arrow"></div>
+        <span class="prog-tag">Pack Bureau de Contrôle</span>
+      </div>
+
+      <div class="certif-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="info-sidebar" aria-label="Informations pratiques">
+          <div class="info-sidebar-title">Informations pratiques</div>
+          <div class="info-block">
+            <div class="ib-label">Durée totale</div>
+            <div class="ib-val"><strong>42 heures</strong> (1 semaine intensive)</div>
+          </div>
+          <div class="info-block">
+            <div class="ib-label">Lieu</div>
+            <div class="ib-val">En centre de formation<br>30300 Fourques</div>
+          </div>
+          <div class="info-block">
+            <div class="ib-label">Budget total</div>
+            <div class="ib-val">
+              <strong style="font-size:1.15rem;color:var(--blue-dark);">1 950 € TTC</strong><br>
+              <span style="font-size:.78rem;color:var(--grey-mid);">dont 1 500 € finançables CPF*</span>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="ib-label">Profil des stagiaires</div>
+            <div class="ib-val">Toute personne souhaitant démarrer rapidement une activité de vérificateur VGP indépendant ou créer son bureau de contrôle.</div>
+          </div>
+          <div class="info-block">
+            <div class="ib-label">Ce pack est idéal si</div>
+            <div class="ib-val">
+              – Vous voulez démarrer rapidement<br>
+              – Vous cherchez une montée en compétence express<br>
+              – Vous souhaitez être opérationnel sans parcours long
+            </div>
+          </div>
+          <div style="margin-top:16px;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);border-radius:9px;padding:14px;font-size:.82rem;color:#78350f;line-height:1.6;">
+            <strong>⚠️ CPF – Condition importante</strong><br>
+            La formation à la création de micro-entreprise (RS 7005) est éligible au CPF uniquement si vous souhaitez créer votre entreprise.
+          </div>
+        </aside>
+
+        <!-- CONTENU PRINCIPAL -->
+        <div>
+          <div class="pack-header">
+            <div class="pack-rs">PACK BUREAU DE CONTRÔLE – 2 formations combinées</div>
+            <h2 class="pack-title" id="pack-title">Lancez votre bureau de contrôle<br>en seulement 1 semaine intensive</h2>
+            <p class="pack-desc">Cette formule est destinée aux personnes qui souhaitent acquérir rapidement les bases minimum nécessaires pour démarrer leur activité. Vous bénéficiez de 2 formations complémentaires réunies en un seul parcours.</p>
+            <div class="pack-metas">
+              <span class="pack-meta">42 heures – 1 semaine</span>
+              <span class="pack-meta">Présentiel</span>
+              <span class="pack-meta">Budget total : 1 950 € TTC</span>
+            </div>
+          </div>
+
+          <div class="pack-content">
+
+            <div class="fm-section-title">Les 2 formations incluses dans ce pack</div>
+
+            <!-- FORMATION 1 : RS 7005 -->
+            <div class="pack-sub-formation">
+              <div class="pack-sub-header blue">
+                <div>
+                  <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.65);margin-bottom:3px;">Formation 1 / RS 7005</div>
+                  <div class="pack-sub-title">Créer et développer sa micro-entreprise</div>
+                </div>
+                <span class="pack-sub-badge cpf">✓ CPF éligible – 1 500 €</span>
+              </div>
+              <div class="pack-sub-body">
+                <div class="pack-sub-meta">
+                  <span>14 heures (e-learning)</span>
+                  <span>dont 3h en synchrone</span>
+                  <span>RS 7005</span>
+                </div>
+                <div class="fm-section-title">Objectifs pédagogiques</div>
+                <ul class="obj-list" style="margin-bottom:12px;">
+                  <li>Comprendre le statut de micro-entrepreneur : régime fiscal et social, plafonds de chiffre d'affaires</li>
+                  <li>Créer sa micro-entreprise : démarches administratives, immatriculation, déclarations obligatoires</li>
+                  <li>Gérer sa comptabilité simplifiée et ses obligations fiscales</li>
+                  <li>Développer son activité : trouver ses premiers clients, établir des devis et factures conformes</li>
+                  <li>Comprendre la protection sociale du micro-entrepreneur</li>
+                </ul>
+                <div class="pack-warning">
+                  <span style="font-size:1rem;flex-shrink:0;">⚠️</span>
+                  <span><strong>Important :</strong> La formation à la création de micro-entreprise (RS 7005) est éligible au CPF uniquement si vous souhaitez créer votre entreprise.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- FORMATION 2 : VGP -->
+            <div class="pack-sub-formation">
+              <div class="pack-sub-header orange">
+                <div>
+                  <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.65);margin-bottom:3px;">Formation 2 – Vérificateur VGP</div>
+                  <div class="pack-sub-title">Formation Vérificateur VGP complète</div>
+                </div>
+                <span class="pack-sub-badge nc">Non éligible CPF – 450 €</span>
+              </div>
+              <div class="pack-sub-body">
+                <div class="pack-sub-meta">
+                  <span>Présentiel en centre</span>
+                  <span>Programme complet</span>
+                </div>
+
+                <div class="fm-section-title">Objectifs pédagogiques</div>
+                <ul class="obj-list">
+                  <li>Connaître la réglementation applicable aux vérifications générales périodiques (VGP)</li>
+                  <li>Identifier les équipements soumis à VGP et leur périodicité de vérification</li>
+                  <li>Réaliser des vérifications visuelles, fonctionnelles et de charge sur les équipements de levage</li>
+                  <li>Rédiger des rapports de vérification conformes aux exigences réglementaires</li>
+                  <li>Émettre des réserves et recommandations dans un rapport circonstancié</li>
+                </ul>
+
+                <div class="fm-section-title">Contenu de la formation</div>
+                <ul class="prog-list">
+                  <li><strong>Cadre réglementaire des VGP :</strong> Code du travail (art. R. 4323-22 à R. 4323-28), décret du 1er mars 2004, arrêté du 1er mars 2004, normes applicables par famille d'équipement</li>
+                  <li><strong>Équipements de levage soumis à VGP :</strong> chariots élévateurs, nacelles élévatrices, ponts roulants, portiques, palans, grues à tour et grues mobiles – points de contrôle spécifiques à chaque famille</li>
+                  <li><strong>Méthodologie de vérification :</strong> examen d'adéquation, examen de montage/installation, examen de l'état de conservation, essais de fonctionnement, tests de charge</li>
+                  <li><strong>Dispositifs de sécurité :</strong> fins de course, limiteurs de charge, systèmes d'arrêt d'urgence – vérification et consignation réglementaire</li>
+                  <li><strong>Rédaction des rapports VGP :</strong> structure du rapport circonstancié, formulation des réserves, délais de mise en conformité, tenue du registre de sécurité</li>
+                  <li><strong>Mise en pratique :</strong> exercices de vérification sur équipements, rédaction de rapports à partir de cas concrets, étude de rapports types</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- BUDGET -->
+            <div class="pack-budget">
+              <div>
+                <div class="pb-label">Budget total du pack</div>
+                <div class="pb-total">1 950 € TTC</div>
+              </div>
+              <div class="pb-detail">
+                ✅ &nbsp;<strong style="color:var(--orange);">1 500 €</strong> financés par le CPF (formation micro-entreprise RS 7005)*<br>
+                💳 &nbsp;<strong style="color:var(--orange);">450 €</strong> formation Vérificateur VGP complète<br>
+                <span style="opacity:.6;font-size:.76rem;margin-top:4px;display:block;">*sous réserve d'éligibilité CPF et de la volonté de créer votre entreprise</span>
+              </div>
+              <a href="#contact" class="btn-primary" style="background:var(--orange);color:var(--blue-dark);">S'inscrire →</a>
+            </div>
+
+            <div class="result-strip">
+              <div class="rl">Résultat à l'issue du pack</div>
+              <p>Vous disposez des connaissances essentielles pour créer et développer votre bureau de contrôle VGP. Vous êtes en mesure de réaliser des vérifications générales périodiques, rédiger des rapports conformes et exercer en tant que vérificateur indépendant.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORGANISATION -->
+  <section id="organisation" aria-labelledby="org-pack-title">
+    <div class="section-inner">
+      <div class="programme-label">
+        <div class="prog-arrow"></div>
+        <span class="prog-tag">Organisation de la formation</span>
+      </div>
+      <div class="org-layout">
+        <div class="org-sidebar">
+          <div class="org-photo">
+            <div class="op-icon">🏢</div>
+            <p>Formation intensive avec accompagnement personnalisé</p>
+          </div>
+          <div class="org-stats">
+            <div class="os-item">
+              <div class="os-num">42h</div>
+              <div class="os-line"></div>
+              <div class="os-label">De formation intensive en 1 semaine</div>
+            </div>
+            <div class="os-divider"></div>
+            <div class="os-item">
+              <div class="os-num">2</div>
+              <div class="os-line"></div>
+              <div class="os-label">Formations combinées en un seul parcours</div>
+            </div>
+          </div>
+        </div>
+        <div class="org-main" id="org-pack-title">
+          <div class="org-section">
+            <div class="org-title">Équipe pédagogique</div>
+            <p class="org-text">Nos formateurs sont des professionnels issus du terrain, spécialistes de la vérification générale périodique et de la création d'entreprise. Chaque intervenant maîtrise les référentiels réglementaires en vigueur (Code du travail, arrêtés VGP, RS 7005) et les exigences pratiques du métier de vérificateur indépendant.</p>
+          </div>
+          <div class="org-section">
+            <div class="org-title">Moyens pédagogiques et techniques</div>
+            <ul class="org-list">
+              <li>Formation e-learning pour la partie micro-entreprise (RS 7005) avec sessions synchrones en visioconférence (3h)</li>
+              <li>Formation présentielle pour la partie vérificateur VGP en salle dédiée à Fourques (30)</li>
+              <li>Supports de cours, textes réglementaires (Code du travail, arrêtés 2004), modèles de rapports VGP</li>
+              <li>Exercices pratiques et cas concrets de vérification sur équipements réels</li>
+              <li>Accompagnement personnalisé pour les démarches CPF et création d'entreprise</li>
+            </ul>
+          </div>
+          <div class="org-section">
+            <div class="org-title">Dispositif de suivi et d'évaluation</div>
+            <ul class="org-list">
+              <li>Feuilles d'émargement signées par demi-journée</li>
+              <li>Évaluation des acquis en fin de chaque module</li>
+              <li>Formulaire de satisfaction stagiaire (évaluation à chaud)</li>
+              <li>Certificat de réalisation remis à l'issue du parcours</li>
+            </ul>
+          </div>
+          <div class="org-section">
+            <div class="org-title">Délai d'accès à la formation</div>
+            <div class="delay-box">De <strong>1 à 3 semaines</strong> à compter de la validation du dossier. Contactez-nous pour connaître les prochaines dates disponibles.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section id="competences" aria-labelledby="comp-pack-title" style="background:var(--grey-bg);">
+    <div class="section-inner">
+      <div class="section-label">Compétences acquises</div>
+      <h2 id="comp-pack-title">Ce que vous saurez faire à l'issue du pack</h2>
+      <p class="section-sub">Deux ensembles de compétences complémentaires pour créer et gérer votre bureau de contrôle VGP.</p>
+      <div class="blocs-grid">
+        <div class="bloc-card">
+          <div class="bloc-header bc01">
+            <div class="bloc-code">RS 7005 – Micro-entreprise</div>
+            <h3>Créer et développer sa micro-entreprise</h3>
+          </div>
+          <div class="bloc-body">
+            <div class="comp-item">Créer sa micro-entreprise et effectuer toutes les démarches administratives d'immatriculation</div>
+            <div class="comp-item">Gérer la comptabilité simplifiée et les obligations fiscales du micro-entrepreneur</div>
+            <div class="comp-item">Trouver ses premiers clients, établir des devis et factures conformes</div>
+            <div class="comp-item">Comprendre le régime social et la protection sociale du micro-entrepreneur</div>
+          </div>
+        </div>
+        <div class="bloc-card">
+          <div class="bloc-header bc02">
+            <div class="bloc-code">Vérificateur VGP</div>
+            <h3>Vérification Générale Périodique des équipements de levage</h3>
+          </div>
+          <div class="bloc-body">
+            <div class="comp-item">Maîtriser la réglementation VGP applicable (Code du travail, arrêtés du 1er mars 2004, normes)</div>
+            <div class="comp-item">Identifier les équipements soumis à VGP, leur périodicité et leurs points de contrôle spécifiques</div>
+            <div class="comp-item">Réaliser des vérifications visuelles, fonctionnelles et essais de charge sur équipements de levage</div>
+            <div class="comp-item">Rédiger des rapports de vérification conformes et émettre des réserves motivées</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINANCEMENT -->
+  <section id="financement" aria-labelledby="fin-title">
+    <div class="section-inner">
+      <div class="section-label">Financement</div>
+      <h2 id="fin-title">Comment financer votre formation</h2>
+      <p class="section-sub">Notre équipe vous accompagne dans vos démarches de prise en charge. Jusqu'à 1 500 € financés par le CPF.</p>
+      <div class="fin-grid">
+        <div class="fin-card">
+          <h3>CPF – Compte Personnel de Formation</h3>
+          <p>La formation RS 7005 (création micro-entreprise) est finançable jusqu'à 1 500 € via votre CPF, sous réserve que vous souhaitiez créer votre entreprise. Consultez votre solde sur <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer">moncompteformation.gouv.fr</a>.</p>
+        </div>
+        <div class="fin-card">
+          <h3>OPCO – Opérateur de Compétences</h3>
+          <p>Prise en charge possible dans le cadre du plan de développement des compétences de votre entreprise. Contactez-nous pour identifier votre OPCO et vérifier votre éligibilité.</p>
+        </div>
+        <div class="fin-card">
+          <h3>France Travail</h3>
+          <p>Financement possible pour les demandeurs d'emploi via France Travail. Renseignez-vous auprès de votre conseiller ou contactez-nous pour être accompagné.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="section-inner">
+      <div class="section-label" style="color:var(--orange);">Contact</div>
+      <h2 id="contact-title">Inscrivez-vous au Pack Bureau de Contrôle</h2>
+      <p class="section-sub">Notre équipe vous répond sous 24h et vérifie votre éligibilité CPF gratuitement.</p>
+      <div class="contact-layout">
+        <form class="contact-form" action="#" method="post" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="prenom">Prénom *</label><input type="text" id="prenom" name="prenom" placeholder="Jean" required autocomplete="given-name"></div>
+            <div class="form-group"><label for="nom">Nom *</label><input type="text" id="nom" name="nom" placeholder="Dupont" required autocomplete="family-name"></div>
+          </div>
+          <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" placeholder="jean.dupont@email.com" required autocomplete="email"></div>
+          <div class="form-group"><label for="tel">Téléphone</label><input type="tel" id="tel" name="tel" placeholder="06 XX XX XX XX" autocomplete="tel"></div>
+          <div class="form-group">
+            <label for="situation">Votre situation *</label>
+            <select id="situation" name="situation" required>
+              <option value="" disabled selected>Sélectionnez</option>
+              <option>Salarié(e) souhaitant créer son entreprise</option>
+              <option>Demandeur(euse) d'emploi</option>
+              <option>Déjà micro-entrepreneur</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="Votre question, projet CPF, dates souhaitées…"></textarea></div>
+          <p class="form-rgpd">Données utilisées uniquement pour traiter votre demande.</p>
+          <button type="submit" class="form-submit">Envoyer ma demande →</button>
+        </form>
+        <div class="contact-infos">
+          <div class="ci-item"><div class="ci-icon">📍</div><div><div class="ci-label">Adresse</div><div class="ci-val">24 Rue Barthélemy Contestin<br>30300 Fourques</div></div></div>
+          <div class="ci-item"><div class="ci-icon">✉️</div><div><div class="ci-label">Email</div><div class="ci-val"><a href="mailto:contact@formation-vgp.com">contact@formation-vgp.com</a></div></div></div>
+          <div class="ci-item"><div class="ci-icon">🕒</div><div><div class="ci-label">Horaires</div><div class="ci-val">Lundi – Vendredi : 9h – 18h<br>Réponse sous 24h</div></div></div>
+          <div style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.28);border-radius:10px;padding:16px;">
+            <p style="font-size:.82rem;color:rgba(255,255,255,.8);">💡 <strong style="color:var(--orange);">Vérifiez votre solde CPF</strong><br>
+            <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" style="color:var(--orange)">moncompteformation.gouv.fr</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="b">Formation VGP</div>
+        <div class="t">Certifié Qualiopi</div>
+        <p>Organisme de formation spécialisé dans la maintenance de matériels de manutention et de levage.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Nos formations</h4>
+        <ul>
+          <li><a href="formation-cqp.html">CQP Agent de maintenance</a></li>
+          <li><a href="formation-pack.html">Pack Bureau de Contrôle</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Liens utiles</h4>
+        <ul>
+          <li><a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer">Mon Compte Formation</a></li>
+          <li><a href="https://www.francecompetences.fr/recherche/rncp/41332/" target="_blank" rel="noopener noreferrer">Fiche RNCP41332</a></li>
+          <li><a href="Certificat_Qualiopi_FormationVGP.pdf" download>Certificat Qualiopi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">CGV</a></li>
+          <li><a href="#">Confidentialité</a></li>
+          <li><a href="#">Règlement intérieur</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Formation VGP – SASU au capital de 5 000 € – SIRET : 928 123 496 00020 – TVA : FR50928123496 – Code APE : 85.59A – RCS Nîmes</p>
+      <div class="footer-qualiopi">Certifié <strong style="color:rgba(255,255,255,.7)">Qualiopi</strong> – Actions de Formation<br>CPF éligible – <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer">moncompteformation.gouv.fr</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }));
+  document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('.form-submit');
+    btn.textContent = '✓ Message envoyé – réponse sous 24h';
+    btn.style.background = '#059669';
+    btn.disabled = true;
+  });
+</script>
+</body>
+</html>

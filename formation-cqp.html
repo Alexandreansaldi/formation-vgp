@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CQP Agent de maintenance de matériels de manutention/levage – RNCP41332 – Formation certifiante 105h – Éligible CPF – Certifié Qualiopi – Formation VGP.">
+  <title>CQP Agent de maintenance de matériels de manutention/levage – Formation VGP</title>
+  <style>
+    :root{--blue-dark:#0f2050;--blue-main:#1a3a7c;--blue-light:#2563eb;--orange:#f59e0b;--orange-dark:#d97706;--white:#ffffff;--grey-bg:#f8fafc;--grey-mid:#94a3b8;--grey-dark:#334155;--text:#1e293b;--border:#e2e8f0;--radius:8px;--shadow:0 2px 16px rgba(15,32,80,.08)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Segoe UI',system-ui,sans-serif;color:var(--text);line-height:1.65;background:var(--white);font-size:15px}
+    .skip{position:absolute;top:-100%;left:0;background:var(--orange);color:var(--blue-dark);padding:10px 18px;font-weight:700;z-index:9999;text-decoration:none}
+    .skip:focus{top:0}
+    .access-bar{background:var(--blue-dark);color:rgba(255,255,255,.65);font-size:.76rem;padding:6px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+    .access-bar a{color:var(--orange);text-decoration:none}
+    header{position:sticky;top:0;z-index:1000;background:var(--white);box-shadow:0 1px 10px rgba(15,32,80,.09)}
+    nav{max-width:1200px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
+    .logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .logo-icon{width:44px;height:44px;flex-shrink:0}
+    .logo-text .brand{font-size:1.15rem;font-weight:800;color:var(--blue-dark);line-height:1}
+    .logo-text .tagline{font-size:.62rem;font-weight:600;color:var(--blue-light);letter-spacing:1px;text-transform:uppercase}
+    .nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+    .nav-links a{text-decoration:none;color:var(--grey-dark);font-weight:600;font-size:.86rem;transition:color .2s}
+    .nav-links a:hover{color:var(--blue-light)}
+    .nav-cta{background:var(--orange)!important;color:var(--blue-dark)!important;padding:9px 20px;border-radius:var(--radius);font-weight:700!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}
+    .hamburger span{display:block;width:25px;height:3px;background:var(--blue-dark);border-radius:2px}
+    .nav-item-dropdown{position:relative;padding-bottom:10px}
+    .nav-item-dropdown>a{display:flex;align-items:center;gap:5px}
+    .nav-item-dropdown>a::after{content:'▾';font-size:.65rem;margin-top:1px}
+    .nav-dropdown{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--white);border-radius:10px;box-shadow:0 8px 28px rgba(15,32,80,.15);min-width:280px;padding:8px 0;z-index:200;border:1px solid var(--border)}
+    .nav-item-dropdown:hover .nav-dropdown,.nav-item-dropdown:focus-within .nav-dropdown{display:block}
+    .nav-dropdown a{display:flex;align-items:center;gap:10px;padding:11px 18px;font-size:.85rem;color:var(--grey-dark);border-bottom:1px solid var(--border);transition:background .15s}
+    .nav-dropdown a:last-child{border-bottom:none}
+    .nav-dropdown a:hover{background:var(--grey-bg);color:var(--blue-light)}
+    .nd-icon{width:32px;height:32px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+    .nd-icon.blue{background:rgba(37,99,235,.1)}
+    .nd-icon.orange{background:rgba(245,158,11,.12)}
+    .nd-info .nd-title{font-weight:700;font-size:.84rem;color:var(--blue-dark)}
+    .nd-info .nd-sub{font-size:.72rem;color:var(--grey-mid);margin-top:1px}
+    .nd-badge{font-size:.65rem;background:var(--orange);color:var(--blue-dark);border-radius:4px;padding:2px 6px;font-weight:800;margin-left:auto;white-space:nowrap}
+    .nd-badge.nc{background:var(--grey-bg);color:var(--grey-dark);border:1px solid var(--border)}
+    /* HERO */
+    .hero{background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue-main) 60%,#1e4db7 100%);color:var(--white);padding:72px 24px 56px;position:relative;overflow:hidden}
+    .hero::after{content:'';position:absolute;bottom:-80px;left:-80px;width:360px;height:360px;background:radial-gradient(circle,rgba(245,158,11,.09) 0%,transparent 70%);pointer-events:none}
+    .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:center;position:relative;z-index:1}
+    .hero h1{font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:900;line-height:1.15;margin-bottom:12px}
+    .hero h1 em{font-style:normal;color:var(--orange)}
+    .hero-sub{font-size:.95rem;opacity:.82;margin-bottom:24px;max-width:500px}
+    .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:var(--blue-dark);padding:12px 26px;border-radius:var(--radius);font-weight:800;font-size:.92rem;text-decoration:none;box-shadow:0 4px 14px rgba(245,158,11,.3);transition:transform .2s}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-secondary{display:inline-flex;align-items:center;background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.3);color:var(--white);padding:10px 22px;border-radius:var(--radius);font-weight:700;font-size:.92rem;text-decoration:none}
+    .hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:28px}
+    .hero-card-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--orange);margin-bottom:16px}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+    .hero-stat{background:rgba(255,255,255,.06);border-radius:9px;padding:12px;text-align:center}
+    .hero-stat .n{font-size:1.65rem;font-weight:900;color:var(--orange);line-height:1}
+    .hero-stat .l{font-size:.68rem;opacity:.78;margin-top:3px}
+    .rncp-tag{background:rgba(37,99,235,.25);border:1px solid rgba(37,99,235,.4);border-radius:9px;padding:12px 16px}
+    .rncp-tag .code{font-size:.95rem;font-weight:900;color:var(--orange)}
+    .rncp-tag .desc{font-size:.76rem;opacity:.82;margin-top:3px}
+    /* STATS */
+    .stats-section{background:var(--white);border-bottom:1px solid var(--border);padding:52px 24px}
+    .stats-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+    .stat-col{text-align:left;padding:0 40px;border-right:1px solid var(--border)}
+    .stat-col:first-child{padding-left:0}
+    .stat-col:last-child{border-right:none}
+    .stat-big{font-size:clamp(2.6rem,4.5vw,3.8rem);font-weight:900;color:var(--text);line-height:1;letter-spacing:-2px}
+    .stat-line{width:44px;height:3px;background:var(--blue-light);margin:10px 0}
+    .stat-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--grey-dark);line-height:1.5}
+    /* SECTIONS */
+    section{padding:64px 24px}
+    .section-inner{max-width:1200px;margin:0 auto}
+    .section-label{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue-light);margin-bottom:6px}
+    h2{font-size:clamp(1.4rem,2vw,2rem);font-weight:800;color:var(--blue-dark);line-height:1.2;margin-bottom:10px}
+    .section-sub{font-size:.92rem;color:var(--grey-dark);max-width:640px;margin-bottom:36px}
+    /* FORMATION STYLE CERTIF AGRI */
+    #formation{background:var(--grey-bg)}
+    .qualiopi-strip{background:var(--blue-dark);color:var(--white);border-radius:12px;padding:20px 28px;display:flex;align-items:center;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+    .qs-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+    .qs-mark{width:42px;height:42px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:900;color:var(--blue-dark);text-align:center;line-height:1.1;flex-shrink:0}
+    .qs-name{font-size:1rem;font-weight:800;letter-spacing:1px}
+    .qs-divider{width:1px;height:36px;background:rgba(255,255,255,.2)}
+    .qs-text{font-size:.84rem;opacity:.85}
+    .programme-label{display:flex;align-items:center;gap:10px;margin-bottom:28px}
+    .prog-arrow{width:28px;height:28px;background:var(--blue-light);clip-path:polygon(0 0,70% 0,100% 50%,70% 100%,0 100%,30% 50%)}
+    .prog-tag{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--blue-main)}
+    .certif-layout{display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:start}
+    .info-sidebar{background:var(--white);border-radius:12px;padding:24px;box-shadow:var(--shadow);position:sticky;top:88px}
+    .info-sidebar-title{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--blue-light);border-bottom:2px solid var(--blue-light);padding-bottom:8px;margin-bottom:18px}
+    .info-block{margin-bottom:18px}
+    .info-block:last-child{margin-bottom:0}
+    .info-block .ib-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--blue-dark);margin-bottom:5px}
+    .info-block .ib-val{font-size:.86rem;color:var(--grey-dark);line-height:1.6}
+    .info-block .ib-val strong{color:var(--blue-dark)}
+    .cpf-sidebar{margin-top:20px;background:linear-gradient(135deg,#1d4ed8,var(--blue-light));border-radius:10px;padding:16px;color:var(--white);text-align:center}
+    .cpf-sidebar .cpf-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;opacity:.85}
+    .cpf-sidebar .cpf-pct{font-size:2rem;font-weight:900;color:var(--orange);line-height:1}
+    .cpf-sidebar .cpf-sub{font-size:.72rem;opacity:.85;margin-bottom:10px}
+    .cpf-sidebar a{display:inline-block;background:var(--orange);color:var(--blue-dark);padding:6px 14px;border-radius:6px;font-weight:700;font-size:.76rem;text-decoration:none}
+    .formation-main{}
+    .fm-head{background:linear-gradient(135deg,var(--blue-dark),var(--blue-main));color:var(--white);border-radius:12px 12px 0 0;padding:28px 32px}
+    .fm-rs{font-size:.78rem;font-weight:700;color:var(--orange);margin-bottom:4px}
+    .fm-body-ref{font-size:.76rem;color:rgba(255,255,255,.72);margin-top:4px}
+    .fm-title{font-size:1.55rem;font-weight:900;line-height:1.2;margin:8px 0 10px;color:var(--white)}
+    .fm-desc{font-size:.88rem;color:rgba(255,255,255,.85);max-width:600px;border-top:1px solid rgba(255,255,255,.2);padding-top:14px;margin-top:14px}
+    .fm-metas{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px}
+    .fm-meta{font-size:.8rem;color:rgba(255,255,255,.8);display:flex;align-items:center;gap:6px}
+    .fm-meta::before{content:'●';color:var(--orange);font-size:.5rem}
+    .fm-content{background:var(--white);border:1px solid var(--border);border-top:none;border-radius:0 0 12px 12px;padding:32px}
+    .fm-section-title{font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--blue-main);margin:28px 0 14px;border-bottom:2px solid var(--blue-light);padding-bottom:6px}
+    .fm-section-title:first-child{margin-top:0}
+    .obj-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:4px}
+    .obj-list li{display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:var(--grey-dark)}
+    .obj-list li::before{content:'⊙';color:var(--blue-light);font-size:1rem;flex-shrink:0;line-height:1.5}
+    .prog-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .prog-list li{display:flex;align-items:flex-start;gap:9px;font-size:.88rem;color:var(--grey-dark)}
+    .prog-list li::before{content:'•';color:var(--blue-light);font-weight:900;font-size:1.1rem;flex-shrink:0;line-height:1.4}
+    .result-strip{background:var(--blue-dark);color:var(--white);border-radius:9px;padding:16px 20px;margin-top:24px}
+    .result-strip .rl{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:5px}
+    .result-strip p{font-size:.86rem;opacity:.88}
+    /* ORGANISATION */
+    #organisation{background:var(--white)}
+    .org-layout{display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:start}
+    .org-sidebar{display:flex;flex-direction:column;gap:20px}
+    .org-photo{background:linear-gradient(160deg,var(--blue-dark),var(--blue-main));border-radius:12px;height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center;color:var(--white)}
+    .org-photo .op-icon{font-size:3rem;margin-bottom:10px}
+    .org-photo p{font-size:.82rem;opacity:.8}
+    .org-stats{background:var(--grey-bg);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:14px}
+    .os-num{font-size:2rem;font-weight:900;color:var(--text);line-height:1;letter-spacing:-1px}
+    .os-line{width:32px;height:2px;background:var(--blue-light);margin:5px 0}
+    .os-label{font-size:.63rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--grey-dark);line-height:1.4}
+    .os-divider{height:1px;background:var(--border)}
+    .org-main{background:var(--grey-bg);border-radius:12px;padding:32px}
+    .org-section{margin-bottom:26px}
+    .org-section:last-child{margin-bottom:0}
+    .org-title{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--blue-main);margin-bottom:10px;border-bottom:1px solid var(--border);padding-bottom:6px}
+    .org-text{font-size:.88rem;color:var(--grey-dark);line-height:1.7}
+    .org-list{list-style:none;display:flex;flex-direction:column;gap:7px;margin-top:8px}
+    .org-list li{display:flex;align-items:flex-start;gap:8px;font-size:.87rem;color:var(--grey-dark)}
+    .org-list li::before{content:'•';color:var(--blue-light);font-weight:900;font-size:1rem;flex-shrink:0;line-height:1.5}
+    .eval-box{background:var(--white);border-left:4px solid var(--blue-light);border-radius:0 8px 8px 0;padding:14px 18px;font-size:.88rem;color:var(--grey-dark);line-height:1.7}
+    .delay-box{background:var(--white);border-left:4px solid var(--orange);border-radius:0 8px 8px 0;padding:14px 18px;font-size:.88rem;color:var(--grey-dark);line-height:1.7}
+    .handi-note{font-size:.82rem;color:var(--grey-mid);font-style:italic;margin-top:10px}
+    .contacts-band{background:var(--blue-dark);color:var(--white);border-radius:12px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-top:32px}
+    .contacts-band h3{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--orange);margin-bottom:8px}
+    .contacts-band p,.contacts-band a{font-size:.9rem;color:rgba(255,255,255,.88);text-decoration:none}
+    .contacts-band a:hover{color:var(--orange)}
+    .cb-item{display:flex;align-items:center;gap:14px}
+    .cb-icon{width:40px;height:40px;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+    /* COMPÉTENCES */
+    #competences{background:var(--grey-bg)}
+    .blocs-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .bloc-card{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+    .bloc-header{padding:20px 24px}
+    .bloc-header.bc01{background:linear-gradient(135deg,var(--blue-dark),var(--blue-main));color:var(--white)}
+    .bloc-header.bc02{background:linear-gradient(135deg,#0f3460,#1a5276);color:var(--white)}
+    .bloc-code{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;opacity:.7;margin-bottom:4px}
+    .bloc-header h3{font-size:.95rem;font-weight:800}
+    .bloc-body{padding:18px 22px}
+    .comp-item{display:flex;gap:9px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--border);font-size:.86rem;color:var(--grey-dark)}
+    .comp-item:last-child{border-bottom:none}
+    .comp-item::before{content:'▸';color:var(--blue-light);font-size:.85rem;flex-shrink:0;margin-top:1px}
+    /* DEBOUCHES */
+    #debouches{background:var(--white)}
+    .emplois-grid{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+    .emploi-tag{background:var(--grey-bg);border:1px solid var(--border);border-radius:7px;padding:9px 14px;font-size:.84rem;font-weight:600;color:var(--blue-dark)}
+    .secteurs-list{display:flex;flex-wrap:wrap;gap:8px}
+    .secteur-tag{background:rgba(37,99,235,.07);border:1px solid rgba(37,99,235,.18);border-radius:6px;padding:5px 12px;font-size:.78rem;color:var(--blue-main);font-weight:600}
+    /* FINANCEMENT */
+    #financement{background:var(--grey-bg)}
+    .fin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .fin-card{background:var(--white);border-radius:11px;padding:22px;box-shadow:var(--shadow);border-top:3px solid var(--blue-light)}
+    .fin-card h3{font-size:.9rem;font-weight:700;color:var(--blue-dark);margin-bottom:8px}
+    .fin-card p{font-size:.84rem;color:var(--grey-dark);line-height:1.65}
+    .fin-card a{color:var(--blue-light);text-decoration:none}
+    /* CONFORMITÉ */
+    #conformite{background:var(--blue-dark);color:var(--white)}
+    #conformite h2{color:var(--white)}
+    #conformite .section-sub{color:rgba(255,255,255,.7)}
+    .conf-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+    .conf-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .conf-list li{display:flex;gap:10px;font-size:.87rem;color:rgba(255,255,255,.82)}
+    .conf-check{width:20px;height:20px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.6rem;color:var(--blue-dark);font-weight:900}
+    .legal-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:11px;padding:20px;font-size:.84rem;color:rgba(255,255,255,.72);line-height:1.9}
+    .legal-box strong{color:rgba(255,255,255,.95)}
+    /* CONTACT */
+    #contact{background:linear-gradient(135deg,var(--blue-dark),var(--blue-main));color:var(--white)}
+    #contact h2{color:var(--white)}
+    #contact .section-sub{color:rgba(255,255,255,.75)}
+    .contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+    .contact-form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:28px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .form-group{margin-bottom:14px}
+    .form-group label{display:block;font-size:.8rem;font-weight:600;margin-bottom:5px;color:rgba(255,255,255,.82)}
+    .form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:10px 13px;color:var(--white);font-size:.9rem;font-family:inherit}
+    .form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.35)}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--orange)}
+    .form-group select option{background:var(--blue-dark)}
+    .form-group textarea{resize:vertical;min-height:90px}
+    .form-rgpd{font-size:.74rem;color:rgba(255,255,255,.48);margin-bottom:14px}
+    .form-submit{width:100%;background:var(--orange);color:var(--blue-dark);border:none;padding:13px;border-radius:var(--radius);font-weight:800;font-size:.92rem;cursor:pointer;font-family:inherit}
+    .contact-infos{display:flex;flex-direction:column;gap:18px}
+    .ci-item{display:flex;gap:13px}
+    .ci-icon{width:40px;height:40px;background:rgba(245,158,11,.13);border:1px solid rgba(245,158,11,.28);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+    .ci-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:2px}
+    .ci-val{font-size:.88rem;color:rgba(255,255,255,.86)}
+    .ci-val a{color:rgba(255,255,255,.86);text-decoration:none}
+    /* FOOTER */
+    footer{background:#070e1f;color:rgba(255,255,255,.5);padding:40px 24px 20px}
+    .footer-inner{max-width:1200px;margin:0 auto}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}
+    .footer-brand .b{font-size:1.05rem;font-weight:800;color:var(--white)}
+    .footer-brand .t{font-size:.68rem;color:var(--orange);margin-bottom:10px;letter-spacing:1px}
+    .footer-brand p{font-size:.8rem;line-height:1.65;max-width:240px}
+    .footer-col h4{font-size:.74rem;font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+    .footer-col ul a{font-size:.82rem;color:rgba(255,255,255,.5);text-decoration:none}
+    .footer-col ul a:hover{color:var(--orange)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.74rem}
+    .footer-bottom a{color:rgba(255,255,255,.4);text-decoration:none}
+    .footer-qualiopi{text-align:right;font-size:.73rem;line-height:1.7}
+    .footer-qualiopi a{color:var(--orange)}
+    :focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:4px}
+    @media(max-width:1024px){
+      .hero-inner{grid-template-columns:1fr}
+      .hero-card{max-width:400px}
+      .certif-layout,.org-layout{grid-template-columns:1fr}
+      .info-sidebar{position:static}
+      .org-sidebar{flex-direction:row}
+      .org-stats{flex-direction:row;flex-wrap:wrap;gap:20px}
+      .footer-top{grid-template-columns:1fr 1fr}
+      .blocs-grid,.conf-grid,.contact-layout{grid-template-columns:1fr}
+    }
+    @media(max-width:768px){
+      section{padding:48px 20px}
+      .hero{padding:56px 20px 44px}
+      .stats-inner{grid-template-columns:1fr}
+      .stat-col{padding:0;border-right:none;border-bottom:1px solid var(--border);padding-bottom:18px}
+      .stat-col:last-child{border-bottom:none}
+      .fin-grid{grid-template-columns:1fr}
+      .form-row{grid-template-columns:1fr}
+      .footer-top{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+      .footer-qualiopi{text-align:left}
+      .nav-links{display:none;flex-direction:column;gap:0;position:absolute;top:68px;left:0;right:0;background:white;box-shadow:0 8px 20px rgba(0,0,0,.1);padding:10px 0}
+      .nav-links.open{display:flex}
+      .nav-links li{padding:0 20px}
+      .nav-links a{display:block;padding:10px 0;border-bottom:1px solid #f1f5f9}
+      .hamburger{display:flex}
+      nav{position:relative}
+      .contacts-band{flex-direction:column;align-items:flex-start}
+      .org-sidebar{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip">Aller au contenu principal</a>
+
+<div class="access-bar">
+  <span>✉ <a href="mailto:contact@formation-vgp.com">contact@formation-vgp.com</a> &nbsp;|&nbsp; Certifié Qualiopi · CPF éligible</span>
+</div>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo-wrap" aria-label="Formation VGP – Accueil">
+      <svg class="logo-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0f2050"/><stop offset="100%" style="stop-color:#2563eb"/></linearGradient></defs>
+        <path d="M24 2 L43 13 L43 35 L24 46 L5 35 L5 13 Z" fill="url(#lg)"/>
+        <rect x="21" y="14" width="4" height="20" fill="white" rx="1"/>
+        <rect x="14" y="14" width="18" height="3" fill="white" rx="1.5"/>
+        <rect x="14" y="14" width="4" height="5" fill="#f59e0b" rx="1"/>
+        <line x1="27" y1="17" x2="27" y2="27" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M25 27 Q25 31 28 31 Q31 31 31 28" stroke="#f59e0b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <rect x="19" y="34" width="8" height="2" fill="white" rx="1"/>
+      </svg>
+      <div class="logo-text">
+        <span class="brand">Formation VGP</span>
+        <span class="tagline">Certifié Qualiopi</span>
+      </div>
+    </a>
+
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li class="nav-item-dropdown">
+        <a href="index.html#nos-formations">Nos formations</a>
+        <div class="nav-dropdown">
+          <a href="formation-cqp.html">
+            <div class="nd-icon blue">🔧</div>
+            <div class="nd-info">
+              <div class="nd-title">CQP Agent de maintenance</div>
+              <div class="nd-sub">Manutention / Levage – RNCP41332</div>
+            </div>
+            <span class="nd-badge">CPF</span>
+          </a>
+          <a href="formation-pack.html">
+            <div class="nd-icon orange">🏢</div>
+            <div class="nd-info">
+              <div class="nd-title">Pack Bureau de Contrôle</div>
+              <div class="nd-sub">1 semaine intensive – VGP + Micro-entreprise</div>
+            </div>
+            <span class="nd-badge nc">CPF partiel</span>
+          </a>
+        </div>
+      </li>
+      <li><a href="#formation">Programme</a></li>
+      <li><a href="#organisation">Organisation</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#financement">Financement</a></li>
+      <li><a href="#contact" class="nav-cta">Nous contacter</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO CQP -->
+  <section class="hero" aria-label="Présentation de la formation CQP">
+    <div class="hero-inner">
+      <div>
+        <h1>
+          <span style="display:block;font-size:1.1em;font-weight:900;color:var(--orange);text-shadow:0 2px 18px rgba(245,158,11,.4);letter-spacing:1px;margin-bottom:4px;">Devenez</span>
+          CQP Agent de maintenance<br>de matériels de <em>manutention/levage</em>
+        </h1>
+        <p class="hero-sub">Formation certifiante de 105 heures alliant théorie et immersion terrain chez un partenaire agréé. Certification reconnue nationalement, financement CPF à 100 % possible.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Demander des informations</a>
+          <a href="#formation" class="btn-secondary">Voir le programme</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-title">Parcours en un coup d'œil</div>
+        <div class="hero-grid">
+          <div class="hero-stat"><div class="n">105h</div><div class="l">Durée totale</div></div>
+          <div class="hero-stat"><div class="n">3 sem.</div><div class="l">De parcours</div></div>
+          <div class="hero-stat"><div class="n">4 500€</div><div class="l">Tarif TTC</div></div>
+          <div class="hero-stat"><div class="n">CPF</div><div class="l">Financement 100%</div></div>
+        </div>
+        <div class="rncp-tag">
+          <div class="code">RNCP41332 – Active</div>
+          <div class="desc">Niveau 3 · CCN Métallurgie · Enregistré jusqu'au 24/09/2030</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-section" role="region" aria-label="Indicateurs qualité">
+    <div class="stats-inner">
+      <div class="stat-col">
+        <div class="stat-big">97%</div>
+        <div class="stat-line"></div>
+        <div class="stat-label">De stagiaires satisfaits<br>par nos formations</div>
+      </div>
+      <div class="stat-col">
+        <div class="stat-big">89%</div>
+        <div class="stat-line"></div>
+        <div class="stat-label">De taux de réussite<br>aux évaluations</div>
+      </div>
+      <div class="stat-col">
+        <div class="stat-big">100%</div>
+        <div class="stat-line"></div>
+        <div class="stat-label">De réussite<br>aux tests</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORMATION DÉTAILLÉE -->
+  <section id="formation" aria-labelledby="prog-title">
+    <div class="section-inner">
+
+      <div class="qualiopi-strip">
+        <div class="qs-logo">
+          <div class="qs-mark">QUALI<br>OPI</div>
+          <span class="qs-name">QUALIOPI</span>
+        </div>
+        <div class="qs-divider"></div>
+        <p class="qs-text">Organisme certifié Qualiopi pour les <strong>Actions de formation</strong>. Cette certification est requise pour l'accès aux financements publics (CPF, OPCO, France Travail). <a href="Certificat_Qualiopi_FormationVGP.pdf" download style="color:var(--orange)">Télécharger le certificat →</a></p>
+      </div>
+
+      <div class="programme-label">
+        <div class="prog-arrow"></div>
+        <span class="prog-tag">Formation</span>
+      </div>
+
+      <div class="certif-layout">
+        <aside class="info-sidebar" aria-label="Informations pratiques">
+          <div class="info-sidebar-title">Informations pratiques</div>
+          <div class="info-block">
+            <div class="ib-label">Durée</div>
+            <div class="ib-val"><strong>105 heures</strong> (3 semaines)</div>
+          </div>
+          <div class="info-block">
+            <div class="ib-label">Tarif</div>
+            <div class="ib-val"><strong>4 500 € TTC</strong></div>
+          </div>
+          <div class="info-block">
+            <div class="ib-label">Lieu</div>
+            <div class="ib-val">• Centre de formation<br>• Stage terrain chez un partenaire agréé</div>
+          </div>
+          <div class="info-block">
+            <div class="ib-label">Profils des stagiaires</div>
+            <div class="ib-val">Toute personne souhaitant exercer ou se reconvertir dans la maintenance de matériels de manutention et de levage. Salariés, demandeurs d'emploi, contrat de professionnalisation.</div>
+          </div>
+          <div class="info-block">
+            <div class="ib-label">Prérequis</div>
+            <div class="ib-val">– Positionnement préalable (entretien)<br>– Aucun diplôme requis<br>– Maîtrise du français (oral et écrit)</div>
+          </div>
+          <div class="cpf-sidebar">
+            <div class="cpf-title">Financement CPF</div>
+            <div class="cpf-pct">100%</div>
+            <div class="cpf-sub">Financement possible via votre Compte Personnel de Formation</div>
+            <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer">Mon Compte Formation →</a>
+          </div>
+        </aside>
+
+        <div class="formation-main">
+          <div class="fm-head">
+            <div class="fm-rs">RNCP41332 – CQP Agent de maintenance de matériels de manutention/levage</div>
+            <div class="fm-body-ref">UIMM – Union des Industries et des Métiers de la Métallurgie · Date d'enregistrement : 24/09/2025</div>
+            <h2 class="fm-title" id="prog-title">CQP Agent de maintenance<br>de matériels de manutention/levage</h2>
+            <p class="fm-desc">À l'issue de cette formation, le stagiaire sera capable d'intervenir en maintenance sur site client équipé de moyens de manutention et de levage : chariots élévateurs, nacelles, potences, ponts roulants, portiques et grues.</p>
+            <div class="fm-metas">
+              <span class="fm-meta">105 heures – 3 semaines</span>
+              <span class="fm-meta">Présentiel</span>
+              <span class="fm-meta">Stage chez un partenaire agréé</span>
+              <span class="fm-meta">Niveau 3 – CCN Métallurgie</span>
+            </div>
+          </div>
+
+          <div class="fm-content">
+            <div class="fm-section-title">Objectifs pédagogiques</div>
+            <ul class="obj-list">
+              <li>Réaliser des essais de fonctionnement et des tests de sécurité sur les matériels de manutention/levage</li>
+              <li>Vérifier le paramétrage et les dispositifs de sécurité des équipements (fins de course, limiteurs de charge)</li>
+              <li>Identifier l'origine d'un dysfonctionnement et proposer les actions correctives adaptées</li>
+              <li>Remplacer des composants ou sous-ensembles standards (pièces d'usure) selon les procédures constructeur</li>
+              <li>Effectuer des réglages simples et des opérations de maintenance programmées (surveillance, relevés)</li>
+              <li>Renseigner et transmettre les informations techniques (carnet de suivi, rapports d'intervention)</li>
+            </ul>
+
+            <div class="fm-section-title">Contenu de la formation</div>
+            <div class="ib-label" style="margin-bottom:10px;">Programme :</div>
+            <ul class="prog-list">
+              <li><strong>Semaine 1 – Formation théorique en centre :</strong> Réglementation applicable (Code du travail, arrêtés, normes), périodicité et points de contrôle par type de machine, lecture de notices techniques et schémas, rédaction de rapports d'intervention</li>
+              <li>Présentation des équipements : chariots élévateurs, nacelles, potences, ponts roulants, portiques et grues à tour/mobiles</li>
+              <li>Essais de fonctionnement et tests de sécurité : méthodologie, critères d'acceptation, consignation des résultats</li>
+              <li>Identification des dysfonctionnements : diagnostic, hiérarchisation, démarche de résolution</li>
+              <li>Remplacement de composants standards : pièces d'usure, sous-ensembles accessibles</li>
+              <li>Réglages simples selon prescriptions constructeur, opérations de maintenance programmées</li>
+              <li><strong>Semaines 2 &amp; 3 – Stage terrain chez un partenaire agréé :</strong> Immersion en situation professionnelle réelle sur équipements industriels. Vérifications, interventions, réglages, traçabilité. Encadrement par un tuteur professionnel.</li>
+            </ul>
+
+            <div class="result-strip">
+              <div class="rl">Résultat à l'issue de la formation</div>
+              <p>Vous obtenez le CQP Agent de maintenance de matériels de manutention/levage (RNCP41332), certification professionnelle de Niveau 3 reconnue dans la branche Métallurgie, valable 5 ans.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORGANISATION -->
+  <section id="organisation" aria-labelledby="org-title">
+    <div class="section-inner">
+      <div class="programme-label">
+        <div class="prog-arrow"></div>
+        <span class="prog-tag">Organisation de la formation</span>
+      </div>
+      <div class="org-layout">
+        <div class="org-sidebar">
+          <div class="org-photo">
+            <div class="op-icon">🏭</div>
+            <p>Formation terrain en conditions réelles avec un partenaire agréé</p>
+          </div>
+          <div class="org-stats">
+            <div class="os-item">
+              <div class="os-num">97%</div><div class="os-line"></div>
+              <div class="os-label">De stagiaires satisfaits par nos formations</div>
+            </div>
+            <div class="os-divider"></div>
+            <div class="os-item">
+              <div class="os-num">89%</div><div class="os-line"></div>
+              <div class="os-label">De taux de réussite aux évaluations</div>
+            </div>
+            <div class="os-divider"></div>
+            <div class="os-item">
+              <div class="os-num">100%</div><div class="os-line"></div>
+              <div class="os-label">De réussite aux tests</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="org-main" id="org-title">
+          <div class="org-section">
+            <div class="org-title">Équipe pédagogique</div>
+            <p class="org-text">Fort de leur expérience dans la maintenance de matériels de manutention et de levage, nos formateurs ont également suivi une formation pédagogique adéquate. Chaque formateur maîtrise les référentiels réglementaires en vigueur et les exigences du terrain.</p>
+          </div>
+          <div class="org-section">
+            <div class="org-title">Moyens pédagogiques et techniques</div>
+            <ul class="org-list">
+              <li>Accueil des apprenants dans une salle dédiée à la formation (présentiel)</li>
+              <li>Documents supports de formation projetés (référentiels constructeurs, textes réglementaires, arrêtés)</li>
+              <li>Outils de diagnostic et de mesure (multimètre, dynamomètre, console, pressostat)</li>
+              <li>Étude de cas concrets issus de situations professionnelles réelles</li>
+              <li>Stage terrain sur équipements réels : ponts roulants, portiques, grues, chariots, nacelles</li>
+              <li>Supports de traçabilité réglementaires (carnets de maintenance, rapports d'intervention)</li>
+            </ul>
+          </div>
+          <div class="org-section">
+            <div class="org-title">Dispositif de suivi de l'exécution et des résultats</div>
+            <ul class="org-list">
+              <li>Feuilles d'émargement signées par demi-journée</li>
+              <li>Évaluation théorique en cours de parcours</li>
+              <li>Mises en situation pratiques (test terrain)</li>
+              <li>Formulaires d'évaluation de la formation (satisfaction à chaud)</li>
+              <li>Évaluation à froid à 6 mois (insertion professionnelle)</li>
+              <li>Certificat de réalisation de l'action de formation délivré à chaque stagiaire</li>
+            </ul>
+          </div>
+          <div class="org-section">
+            <div class="org-title">Modalités d'évaluation de la formation</div>
+            <div class="eval-box">
+              <strong>1. Évaluation en situation professionnelle réelle</strong> – Observation en entreprise ou en centre habilité. Questionnement avec apport d'éléments de preuve.<br><br>
+              <strong>2. Présentation de projets ou activités</strong> – Le candidat transmet un rapport à l'UIMM territoriale et présente ses projets devant une commission d'évaluation paritaire.<br><br>
+              <strong>3. Avis de l'entreprise</strong> – Le tuteur ou responsable hiérarchique émet un avis au regard du référentiel d'activité.
+            </div>
+          </div>
+          <div class="org-section">
+            <div class="org-title">Délai d'accès à la formation</div>
+            <div class="delay-box">De <strong>2 à 4 semaines</strong> à compter de la validation du dossier de financement.<br>Pour les situations particulières ou urgentes, contactez-nous directement.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contacts-band">
+        <div><h3>Informations et inscriptions</h3><p><a href="https://formation-vgp.com">formation-vgp.com</a></p></div>
+        <div class="cb-item"><div class="cb-icon">✉️</div><div><p><a href="mailto:contact@formation-vgp.com">contact@formation-vgp.com</a></p></div></div>
+        <div class="cb-item"><div class="cb-icon">📅</div><div><p style="font-size:.82rem;opacity:.75">Réponse sous 24h · Lun–Ven 9h–18h</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCS DE COMPÉTENCES -->
+  <section id="competences" aria-labelledby="comp-title">
+    <div class="section-inner">
+      <div class="section-label">Référentiel RNCP41332</div>
+      <h2 id="comp-title">Les 2 blocs de compétences</h2>
+      <p class="section-sub">Capitalisables séparément. Source : France Compétences – fiche RNCP41332.</p>
+      <div class="blocs-grid">
+        <div class="bloc-card">
+          <div class="bloc-header bc01">
+            <div class="bloc-code">RNCP41332BC01</div>
+            <h3>Vérification, essais et tests de sécurité</h3>
+          </div>
+          <div class="bloc-body">
+            <div class="comp-item">Procéder à des essais de fonctionnement sur matériel de manutention/levage</div>
+            <div class="comp-item">Vérifier le paramétrage et tests de sécurité sur matériel de manutention/levage</div>
+            <div class="comp-item">Renseigner et transmettre des informations liées à des essais et tests</div>
+          </div>
+        </div>
+        <div class="bloc-card">
+          <div class="bloc-header bc02">
+            <div class="bloc-code">RNCP41332BC02</div>
+            <h3>Intervention, réglages et relevés techniques</h3>
+          </div>
+          <div class="bloc-body">
+            <div class="comp-item">Identifier l'origine d'un dysfonctionnement</div>
+            <div class="comp-item">Remplacer un composant ou sous-ensemble standard</div>
+            <div class="comp-item">Procéder à des réglages simples selon les prescriptions constructeur</div>
+            <div class="comp-item">Effectuer des opérations de maintenance programmées (surveillance, relevés)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DÉBOUCHÉS -->
+  <section id="debouches" aria-labelledby="deb-title" style="background:var(--white);">
+    <div class="section-inner">
+      <div class="section-label">Débouchés professionnels</div>
+      <h2 id="deb-title">Types d'emplois accessibles</h2>
+      <p class="section-sub">Code ROME : I1603. Source : fiche RNCP41332 – France Compétences.</p>
+      <div class="emplois-grid">
+        <span class="emploi-tag">Employé(e) de maintenance de matériels</span>
+        <span class="emploi-tag">Agent(e) de maintenance de matériels de manutention</span>
+        <span class="emploi-tag">Mécanicien de manutention</span>
+        <span class="emploi-tag">Mécanicien d'équipements et engins motorisés de manutention</span>
+        <span class="emploi-tag">Mécanicien-réparateur d'engins de levage et de manutention</span>
+      </div>
+      <p class="section-sub" style="margin-top:24px;margin-bottom:12px;">Secteurs d'activité :</p>
+      <div class="secteurs-list">
+        <span class="secteur-tag">Aéronautique &amp; Spatial</span>
+        <span class="secteur-tag">Automobile</span>
+        <span class="secteur-tag">Électrique &amp; Électronique</span>
+        <span class="secteur-tag">Ferroviaire</span>
+        <span class="secteur-tag">Mécanique</span>
+        <span class="secteur-tag">Métallurgie &amp; Sidérurgie</span>
+        <span class="secteur-tag">Naval &amp; Énergies Marines</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINANCEMENT -->
+  <section id="financement" aria-labelledby="fin-title">
+    <div class="section-inner">
+      <div class="section-label">Financement</div>
+      <h2 id="fin-title">Comment financer votre formation</h2>
+      <p class="section-sub">Notre équipe vous accompagne dans toutes vos démarches de prise en charge.</p>
+      <div class="fin-grid">
+        <div class="fin-card">
+          <h3>CPF – Compte Personnel de Formation</h3>
+          <p>Financement jusqu'à 100 % via votre CPF. Accessible à tout salarié et demandeur d'emploi. Consultez votre solde sur <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer">moncompteformation.gouv.fr</a>.</p>
+        </div>
+        <div class="fin-card">
+          <h3>OPCO – Opérateur de Compétences</h3>
+          <p>Prise en charge possible dans le cadre du plan de développement des compétences de votre entreprise. Contactez-nous pour identifier votre OPCO.</p>
+        </div>
+        <div class="fin-card">
+          <h3>France Travail / Pro-A</h3>
+          <p>Financement possible pour les demandeurs d'emploi via France Travail, ou pour les salariés en reconversion via le dispositif Pro-A.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFORMITÉ -->
+  <section id="conformite" aria-labelledby="conf-title" style="background:var(--blue-dark);color:var(--white);">
+    <div class="section-inner">
+      <div class="conf-grid">
+        <div>
+          <div class="section-label" style="color:var(--orange);">Qualité &amp; conformité</div>
+          <h2 id="conf-title" style="color:var(--white);">Un organisme certifié et transparent</h2>
+          <p class="section-sub" style="color:rgba(255,255,255,.72);">Informations réglementaires obligatoires pour un organisme de formation référencé.</p>
+          <ul class="conf-list">
+            <li><div class="conf-check">✓</div><span><strong>Certification Qualiopi</strong> – Actions de formation. <a href="Certificat_Qualiopi_FormationVGP.pdf" download style="color:var(--orange)">Télécharger le certificat</a>.</span></li>
+            <li><div class="conf-check">✓</div><span><strong>RNCP41332</strong> – Enregistré le 24/09/2025, valide jusqu'au 24/09/2030. Certifié par l'UIMM.</span></li>
+            <li><div class="conf-check">✓</div><span>Éligible <strong>CPF</strong> – Accessible sur moncompteformation.gouv.fr.</span></li>
+            <li><div class="conf-check">✓</div><span>Numéro de déclaration d'activité (NDA) enregistré auprès de la DREETS Occitanie – en cours d'obtention.</span></li>
+            <li><div class="conf-check">✓</div><span>Convention de formation signée avec chaque stagiaire et financeur.</span></li>
+            <li><div class="conf-check">✓</div><span>Règlement intérieur et livret d'accueil remis à chaque stagiaire à l'entrée en formation.</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="legal-box">
+            <p style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:12px;">Informations légales</p>
+            <p>
+              <strong>Raison sociale :</strong> FORMATION VGP<br>
+              <strong>Forme juridique :</strong> SASU<br>
+              <strong>SIREN :</strong> 928 123 496<br>
+              <strong>SIRET (siège) :</strong> 928 123 496 00020<br>
+              <strong>N° TVA intracommunautaire :</strong> FR50928123496<br>
+              <strong>Capital social :</strong> 5 000 €<br>
+              <strong>NDA :</strong> <span style="color:rgba(255,255,255,.4);font-style:italic">[En cours d'obtention auprès de la DREETS]</span><br>
+              <strong>Code APE :</strong> 85.59A<br>
+              <strong>Convention collective :</strong> IDCC 1516 – Organismes de formation<br>
+              <strong>Inscription RCS :</strong> Greffe de Nîmes, le 21/10/2025<br>
+              <strong>Dirigeant :</strong> Ansaldi Fabien (Président)<br>
+              <strong>Adresse :</strong> 24 Rue Barthélemy Contestin, 30300 Fourques
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="section-inner">
+      <div class="section-label" style="color:var(--orange);">Contact</div>
+      <h2 id="contact-title">Démarrez votre parcours</h2>
+      <p class="section-sub">Notre équipe vous répond sous 24h et vérifie votre éligibilité CPF gratuitement.</p>
+      <div class="contact-layout">
+        <form class="contact-form" action="#" method="post" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="prenom">Prénom *</label><input type="text" id="prenom" name="prenom" placeholder="Jean" required autocomplete="given-name"></div>
+            <div class="form-group"><label for="nom">Nom *</label><input type="text" id="nom" name="nom" placeholder="Dupont" required autocomplete="family-name"></div>
+          </div>
+          <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" placeholder="jean.dupont@email.com" required autocomplete="email"></div>
+          <div class="form-group"><label for="tel">Téléphone</label><input type="tel" id="tel" name="tel" placeholder="06 XX XX XX XX" autocomplete="tel"></div>
+          <div class="form-group">
+            <label for="situation">Votre situation *</label>
+            <select id="situation" name="situation" required>
+              <option value="" disabled selected>Sélectionnez</option>
+              <option>Salarié(e)</option>
+              <option>Demandeur(euse) d'emploi</option>
+              <option>Indépendant(e) / Chef d'entreprise</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="Votre question, projet CPF, dates souhaitées…"></textarea></div>
+          <p class="form-rgpd">Données utilisées uniquement pour traiter votre demande.</p>
+          <button type="submit" class="form-submit">Envoyer ma demande →</button>
+        </form>
+        <div class="contact-infos">
+          <div class="ci-item"><div class="ci-icon">📍</div><div><div class="ci-label">Adresse</div><div class="ci-val">24 Rue Barthélemy Contestin<br>30300 Fourques</div></div></div>
+          <div class="ci-item"><div class="ci-icon">✉️</div><div><div class="ci-label">Email</div><div class="ci-val"><a href="mailto:contact@formation-vgp.com">contact@formation-vgp.com</a></div></div></div>
+          <div class="ci-item"><div class="ci-icon">🕒</div><div><div class="ci-label">Horaires</div><div class="ci-val">Lundi – Vendredi : 9h – 18h<br>Réponse sous 24h</div></div></div>
+          <div style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.28);border-radius:10px;padding:16px;">
+            <p style="font-size:.82rem;color:rgba(255,255,255,.8);">💡 <strong style="color:var(--orange);">Vérifiez votre solde CPF</strong><br>
+            <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" style="color:var(--orange)">moncompteformation.gouv.fr</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="b">Formation VGP</div>
+        <div class="t">Certifié Qualiopi</div>
+        <p>Organisme de formation spécialisé dans la maintenance de matériels de manutention et de levage.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Nos formations</h4>
+        <ul>
+          <li><a href="formation-cqp.html">CQP Agent de maintenance</a></li>
+          <li><a href="formation-pack.html">Pack Bureau de Contrôle</a></li>
+          <li><a href="#organisation">Organisation</a></li>
+          <li><a href="#competences">Compétences</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Liens utiles</h4>
+        <ul>
+          <li><a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer">Mon Compte Formation</a></li>
+          <li><a href="https://www.francecompetences.fr/recherche/rncp/41332/" target="_blank" rel="noopener noreferrer">Fiche RNCP41332</a></li>
+          <li><a href="Certificat_Qualiopi_FormationVGP.pdf" download>Certificat Qualiopi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">CGV</a></li>
+          <li><a href="#">Confidentialité</a></li>
+          <li><a href="#">Règlement intérieur</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Formation VGP – SASU au capital de 5 000 € – SIRET : 928 123 496 00020 – TVA : FR50928123496 – Code APE : 85.59A – RCS Nîmes</p>
+      <div class="footer-qualiopi">Certifié <strong style="color:rgba(255,255,255,.7)">Qualiopi</strong> – Actions de Formation &nbsp;|&nbsp; RNCP41332 valide jusqu'au 24/09/2030<br>CPF éligible – <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer">moncompteformation.gouv.fr</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }));
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}
+    });
+  }, {threshold:0.07});
+  document.querySelectorAll('.bloc-card,.fin-card,.info-sidebar,.formation-main,.org-main').forEach(el => {
+    el.style.opacity='0';el.style.transform='translateY(14px)';el.style.transition='opacity .4s ease,transform .4s ease';
+    obs.observe(el);
+  });
+  document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('.form-submit');
+    btn.textContent = '✓ Message envoyé – réponse sous 24h';
+    btn.style.background = '#059669';
+    btn.disabled = true;
+  });
+</script>
+</body>
+</html>

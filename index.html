@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formation VGP – Organisme de formation certifié Qualiopi spécialisé dans la maintenance de matériels de manutention et de levage. Formations éligibles CPF.">
+  <title>Formation VGP – Spécialiste des formations en manutention et levage</title>
+  <style>
+    :root{--blue-dark:#0f2050;--blue-main:#1a3a7c;--blue-light:#2563eb;--orange:#f59e0b;--white:#ffffff;--grey-bg:#f8fafc;--grey-mid:#94a3b8;--grey-dark:#334155;--text:#1e293b;--border:#e2e8f0;--radius:8px;--shadow:0 2px 16px rgba(15,32,80,.08)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Segoe UI',system-ui,sans-serif;color:var(--text);line-height:1.65;background:var(--white);font-size:15px}
+    .skip{position:absolute;top:-100%;left:0;background:var(--orange);color:var(--blue-dark);padding:10px 18px;font-weight:700;z-index:9999;text-decoration:none}
+    .skip:focus{top:0}
+    /* ACCESS BAR */
+    .access-bar{background:var(--blue-dark);color:rgba(255,255,255,.65);font-size:.76rem;padding:6px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+    .access-bar a{color:var(--orange);text-decoration:none}
+    /* HEADER */
+    header{position:sticky;top:0;z-index:1000;background:var(--white);box-shadow:0 1px 10px rgba(15,32,80,.09)}
+    nav{max-width:1200px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
+    .logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .logo-icon{width:44px;height:44px;flex-shrink:0}
+    .logo-text .brand{font-size:1.15rem;font-weight:800;color:var(--blue-dark);line-height:1}
+    .logo-text .tagline{font-size:.62rem;font-weight:600;color:var(--blue-light);letter-spacing:1px;text-transform:uppercase}
+    .nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+    .nav-links a{text-decoration:none;color:var(--grey-dark);font-weight:600;font-size:.86rem;transition:color .2s}
+    .nav-links a:hover{color:var(--blue-light)}
+    .nav-cta{background:var(--orange)!important;color:var(--blue-dark)!important;padding:9px 20px;border-radius:var(--radius);font-weight:700!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}
+    .hamburger span{display:block;width:25px;height:3px;background:var(--blue-dark);border-radius:2px}
+    /* DROPDOWN — bridge via ::after pseudo-element, ne décale plus le texte */
+    .nav-item-dropdown{position:relative}
+    .nav-item-dropdown::after{content:'';position:absolute;bottom:-10px;left:0;right:0;height:10px}
+    .nav-item-dropdown>a{display:flex;align-items:center;gap:5px}
+    .nav-item-dropdown>a span::after{content:' ▾';font-size:.65rem;opacity:.6}
+    .nav-dropdown{display:none;position:absolute;top:calc(100% + 2px);left:50%;transform:translateX(-50%);background:var(--white);border-radius:12px;box-shadow:0 12px 40px rgba(15,32,80,.18);min-width:290px;padding:10px;z-index:200;border:1px solid var(--border)}
+    .nav-item-dropdown:hover .nav-dropdown,.nav-item-dropdown:focus-within .nav-dropdown{display:block}
+    .nav-dropdown a{display:flex;align-items:center;gap:12px;padding:12px 14px;font-size:.85rem;color:var(--grey-dark);border-radius:8px;transition:background .15s;margin-bottom:3px}
+    .nav-dropdown a:last-child{margin-bottom:0}
+    .nav-dropdown a:hover{background:var(--grey-bg);color:var(--blue-dark)}
+    .nd-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+    .nd-icon.blue{background:rgba(37,99,235,.08)}
+    .nd-icon.orange{background:rgba(245,158,11,.10)}
+    .nd-info .nd-title{font-weight:700;font-size:.86rem;color:var(--blue-dark)}
+    .nd-info .nd-sub{font-size:.73rem;color:var(--grey-mid);margin-top:2px}
+    /* HERO */
+    .hero{background:linear-gradient(135deg,#07122e 0%,var(--blue-dark) 45%,#1a3480 100%);color:var(--white);padding:90px 24px 80px;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;top:-140px;right:-60px;width:640px;height:640px;background:radial-gradient(circle,rgba(245,158,11,.09) 0%,transparent 65%);pointer-events:none}
+    .hero::after{content:'';position:absolute;bottom:-100px;left:-80px;width:420px;height:420px;background:radial-gradient(circle,rgba(37,99,235,.13) 0%,transparent 65%);pointer-events:none}
+    .hero-split{max-width:1160px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr 400px;gap:56px;align-items:center}
+    .hero-pretag{display:inline-flex;align-items:center;gap:7px;background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.32);color:var(--orange);padding:6px 16px;border-radius:99px;font-size:.76rem;font-weight:700;letter-spacing:.5px;margin-bottom:22px}
+    .hero h1{font-size:clamp(2.2rem,3.6vw,3.5rem);font-weight:900;line-height:1.08;margin-bottom:20px;letter-spacing:-.5px}
+    .hero h1 em{font-style:normal;color:var(--orange)}
+    .hero-sub{font-size:1rem;opacity:.83;max-width:520px;margin-bottom:30px;line-height:1.75;font-weight:400}
+    .hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:var(--blue-dark);padding:13px 28px;border-radius:var(--radius);font-weight:800;font-size:.92rem;text-decoration:none;box-shadow:0 4px 18px rgba(245,158,11,.35);transition:transform .2s,box-shadow .2s}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,158,11,.4)}
+    .btn-secondary{display:inline-flex;align-items:center;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.28);color:var(--white);padding:11px 24px;border-radius:var(--radius);font-weight:700;font-size:.92rem;text-decoration:none;transition:background .2s}
+    .btn-secondary:hover{background:rgba(255,255,255,.16)}
+    .hero-trust{display:flex;gap:18px;flex-wrap:wrap}
+    .hero-trust span{font-size:.79rem;color:rgba(255,255,255,.6);font-weight:600}
+    /* HERO PANEL */
+    .hero-panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.11);border-radius:18px;padding:26px 24px;display:flex;flex-direction:column}
+    .hp-stat{padding:14px 0;display:flex;flex-direction:column;gap:4px}
+    .hp-stat:first-child{padding-top:0}
+    .hp-n{font-size:2.4rem;font-weight:900;color:var(--orange);line-height:1;letter-spacing:-1px}
+    .hp-label{font-size:.77rem;color:rgba(255,255,255,.6);font-weight:500;line-height:1.4}
+    .hp-divider{height:1px;background:rgba(255,255,255,.08);margin:0}
+    .hp-formations{display:flex;flex-direction:column;gap:9px;padding:16px 0}
+    .hp-form-item{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:9px;padding:10px 12px}
+    .hp-form-icon{font-size:1.15rem;flex-shrink:0}
+    .hp-form-name{font-size:.82rem;font-weight:700;color:var(--white);line-height:1.2}
+    .hp-form-sub{font-size:.71rem;color:rgba(255,255,255,.48);margin-top:2px}
+    .hp-cta{display:block;background:var(--orange);color:var(--blue-dark);text-align:center;padding:12px;border-radius:var(--radius);font-weight:800;font-size:.88rem;text-decoration:none;transition:opacity .2s}
+    .hp-cta:hover{opacity:.9}
+    /* STATS */
+    .stats-section{background:var(--white);border-bottom:1px solid var(--border);padding:44px 24px}
+    .stats-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+    .stat-col{text-align:left;padding:0 40px;border-right:1px solid var(--border)}
+    .stat-col:first-child{padding-left:0}
+    .stat-col:last-child{border-right:none}
+    .stat-big{font-size:clamp(2.6rem,4.5vw,3.8rem);font-weight:900;color:var(--text);line-height:1;letter-spacing:-2px}
+    .stat-line{width:44px;height:3px;background:var(--blue-light);margin:10px 0}
+    .stat-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--grey-dark);line-height:1.5}
+    /* SECTIONS */
+    section{padding:72px 24px}
+    .section-inner{max-width:1200px;margin:0 auto}
+    .section-label{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue-light);margin-bottom:6px}
+    h2{font-size:clamp(1.5rem,2.2vw,2.1rem);font-weight:800;color:var(--blue-dark);line-height:1.2;margin-bottom:10px}
+    .section-sub{font-size:.92rem;color:var(--grey-dark);max-width:640px;margin-bottom:36px;line-height:1.7}
+    /* FORMATIONS CARDS */
+    #nos-formations{background:var(--grey-bg)}
+    .formations-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:8px}
+    .form-card{background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(15,32,80,.10);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;border:1px solid var(--border)}
+    .form-card:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(15,32,80,.14)}
+    .form-card-header{padding:32px 32px 24px}
+    .form-card-header.h-blue{background:linear-gradient(135deg,var(--blue-dark),var(--blue-main))}
+    .form-card-header.h-orange{background:linear-gradient(135deg,#7c2d12,#b45309,#d97706)}
+    .fc-tag{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.65);margin-bottom:10px}
+    .form-card-header h3{font-size:1.25rem;font-weight:900;color:var(--white);line-height:1.25;margin-bottom:10px}
+    .fc-desc{font-size:.86rem;color:rgba(255,255,255,.78);line-height:1.6}
+    .form-card-body{padding:26px 32px 30px;display:flex;flex-direction:column;flex:1}
+    .fc-row{display:flex;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+    .fc-info{display:flex;flex-direction:column;gap:2px}
+    .fc-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--grey-mid)}
+    .fc-val{font-size:.95rem;font-weight:700;color:var(--blue-dark)}
+    .fc-tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}
+    .fc-pill{font-size:.72rem;border-radius:99px;padding:3px 11px;font-weight:600}
+    .fc-pill.cpf{background:rgba(37,99,235,.1);color:var(--blue-main);border:1px solid rgba(37,99,235,.2)}
+    .fc-pill.ncpf{background:var(--grey-bg);color:var(--grey-dark);border:1px solid var(--border)}
+    .fc-pill.qualiopi{background:rgba(245,158,11,.12);color:#92400e;border:1px solid rgba(245,158,11,.3)}
+    .fc-highlights{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:22px}
+    .fc-highlights li{font-size:.85rem;color:var(--grey-dark);display:flex;align-items:flex-start;gap:8px}
+    .fc-highlights li::before{content:'✓';color:var(--blue-light);font-weight:700;flex-shrink:0}
+    .fc-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:var(--radius);font-weight:800;font-size:.9rem;text-decoration:none;margin-top:auto;transition:opacity .2s}
+    .fc-cta.blue{background:var(--blue-dark);color:var(--white)}
+    .fc-cta.orange{background:var(--orange);color:var(--blue-dark)}
+    .fc-cta:hover{opacity:.88}
+    /* NOTRE ORGANISME */
+    #notre-organisme{background:var(--white)}
+    .organisme-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    .organisme-left h2{margin-bottom:12px}
+    .organisme-left p{font-size:.91rem;color:var(--grey-dark);line-height:1.8;margin-bottom:16px}
+    .organisme-right{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .atout-card{background:var(--grey-bg);border-radius:12px;padding:20px;border:1px solid var(--border)}
+    .atout-icon{font-size:1.6rem;margin-bottom:10px}
+    .atout-title{font-size:.84rem;font-weight:700;color:var(--blue-dark);margin-bottom:5px}
+    .atout-text{font-size:.78rem;color:var(--grey-dark);line-height:1.6}
+    /* QUALIOPI */
+    #qualite-labels{background:var(--blue-dark);color:var(--white)}
+    .quali-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+    .quali-left h2{color:var(--white);margin-bottom:12px}
+    .quali-left p{font-size:.9rem;color:rgba(255,255,255,.75);line-height:1.75;margin-bottom:20px}
+    .quali-badge-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+    .quali-mark{width:80px;height:80px;background:var(--orange);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:.7rem;font-weight:900;color:var(--blue-dark);text-align:center;line-height:1.2;flex-shrink:0;letter-spacing:.5px}
+    .quali-mark-text{font-size:1.25rem;font-weight:900;color:var(--white)}
+    .quali-detail{font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.7}
+    .quali-right{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:32px;text-align:center}
+    .quali-right h3{font-size:1rem;font-weight:700;color:var(--orange);margin-bottom:6px}
+    .quali-right p{font-size:.84rem;color:rgba(255,255,255,.7);margin-bottom:20px;line-height:1.65}
+    .dl-btn{display:inline-flex;align-items:center;gap:9px;background:var(--white);color:var(--blue-dark);padding:13px 24px;border-radius:var(--radius);font-weight:800;font-size:.9rem;text-decoration:none;transition:transform .2s,box-shadow .2s}
+    .dl-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.15)}
+    .dl-sub{font-size:.72rem;color:rgba(255,255,255,.4);margin-top:12px}
+    /* TÉMOIGNAGES */
+    #temoignages{background:var(--grey-bg)}
+    .temoignages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+    .temoignage-card{background:var(--white);border-radius:14px;padding:28px;border:1px solid var(--border);position:relative;display:flex;flex-direction:column;gap:16px;box-shadow:var(--shadow)}
+    .temoignage-card::before{content:'\201C';font-size:4rem;font-weight:900;color:var(--blue-light);opacity:.12;position:absolute;top:12px;left:18px;line-height:1;font-family:Georgia,serif}
+    .temo-stars{display:flex;gap:3px;color:var(--orange);font-size:.95rem}
+    .temo-text{font-size:.89rem;color:var(--grey-dark);line-height:1.75;font-style:italic;position:relative;z-index:1}
+    .temo-footer{display:flex;align-items:center;gap:12px;margin-top:auto}
+    .temo-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;color:var(--white);flex-shrink:0}
+    .temo-avatar.av1{background:linear-gradient(135deg,var(--blue-dark),var(--blue-main))}
+    .temo-avatar.av2{background:linear-gradient(135deg,#7c2d12,#b45309)}
+    .temo-avatar.av3{background:linear-gradient(135deg,#065f46,#059669)}
+    .temo-name{font-size:.86rem;font-weight:700;color:var(--blue-dark)}
+    .temo-formation{font-size:.72rem;color:var(--grey-mid)}
+    /* CONTACT */
+    #contact{background:linear-gradient(135deg,var(--blue-dark),var(--blue-main));color:var(--white)}
+    #contact h2{color:var(--white)}
+    #contact .section-sub{color:rgba(255,255,255,.75)}
+    .contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+    .contact-form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:28px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .form-group{margin-bottom:14px}
+    .form-group label{display:block;font-size:.8rem;font-weight:600;margin-bottom:5px;color:rgba(255,255,255,.82)}
+    .form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:10px 13px;color:var(--white);font-size:.9rem;font-family:inherit}
+    .form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.35)}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--orange)}
+    .form-group select option{background:var(--blue-dark)}
+    .form-group textarea{resize:vertical;min-height:90px}
+    .form-rgpd{font-size:.74rem;color:rgba(255,255,255,.48);margin-bottom:14px}
+    .form-submit{width:100%;background:var(--orange);color:var(--blue-dark);border:none;padding:13px;border-radius:var(--radius);font-weight:800;font-size:.92rem;cursor:pointer;font-family:inherit}
+    .contact-infos{display:flex;flex-direction:column;gap:18px}
+    .ci-item{display:flex;gap:13px}
+    .ci-icon{width:40px;height:40px;background:rgba(245,158,11,.13);border:1px solid rgba(245,158,11,.28);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+    .ci-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:2px}
+    .ci-val{font-size:.88rem;color:rgba(255,255,255,.86)}
+    .ci-val a{color:rgba(255,255,255,.86);text-decoration:none}
+    /* FOOTER */
+    footer{background:#070e1f;color:rgba(255,255,255,.5);padding:40px 24px 20px}
+    .footer-inner{max-width:1200px;margin:0 auto}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px}
+    .footer-brand .b{font-size:1.05rem;font-weight:800;color:var(--white)}
+    .footer-brand .t{font-size:.68rem;color:var(--orange);margin-bottom:10px;letter-spacing:1px}
+    .footer-brand p{font-size:.8rem;line-height:1.65;max-width:240px}
+    .footer-col h4{font-size:.74rem;font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+    .footer-col ul a{font-size:.82rem;color:rgba(255,255,255,.5);text-decoration:none}
+    .footer-col ul a:hover{color:var(--orange)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.74rem}
+    .footer-bottom a{color:rgba(255,255,255,.4);text-decoration:none}
+    .footer-qualiopi{text-align:right;font-size:.73rem;line-height:1.7}
+    .footer-qualiopi a{color:var(--orange)}
+    :focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:4px}
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .hero-split{grid-template-columns:1fr;gap:36px}
+      .hero-panel{display:none}
+      .formations-grid,.temoignages-grid,.organisme-grid,.quali-inner,.contact-layout{grid-template-columns:1fr}
+      .organisme-right{grid-template-columns:1fr 1fr}
+      .footer-top{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:768px){
+      section{padding:52px 20px}
+      .hero{padding:60px 20px 48px}
+      .stats-inner{grid-template-columns:1fr}
+      .stat-col{padding:0;border-right:none;border-bottom:1px solid var(--border);padding-bottom:18px}
+      .stat-col:last-child{border-bottom:none}
+      .form-row{grid-template-columns:1fr}
+      .organisme-right{grid-template-columns:1fr}
+      .footer-top{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+      .footer-qualiopi{text-align:left}
+      .nav-links{display:none;flex-direction:column;gap:0;position:absolute;top:68px;left:0;right:0;background:white;box-shadow:0 8px 20px rgba(0,0,0,.1);padding:10px 0}
+      .nav-links.open{display:flex}
+      .nav-links li{padding:0 20px}
+      .nav-links a{display:block;padding:10px 0;border-bottom:1px solid #f1f5f9}
+      .hamburger{display:flex}
+      nav{position:relative}
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip">Aller au contenu principal</a>
+
+<div class="access-bar">
+  <span>✉ <a href="mailto:contact@formation-vgp.com">contact@formation-vgp.com</a> &nbsp;|&nbsp; Certifié Qualiopi · CPF éligible</span>
+</div>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo-wrap" aria-label="Formation VGP – Accueil">
+      <svg class="logo-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0f2050"/><stop offset="100%" style="stop-color:#2563eb"/></linearGradient></defs>
+        <path d="M24 2 L43 13 L43 35 L24 46 L5 35 L5 13 Z" fill="url(#lg)"/>
+        <rect x="21" y="14" width="4" height="20" fill="white" rx="1"/>
+        <rect x="14" y="14" width="18" height="3" fill="white" rx="1.5"/>
+        <rect x="14" y="14" width="4" height="5" fill="#f59e0b" rx="1"/>
+        <line x1="27" y1="17" x2="27" y2="27" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M25 27 Q25 31 28 31 Q31 31 31 28" stroke="#f59e0b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <rect x="19" y="34" width="8" height="2" fill="white" rx="1"/>
+      </svg>
+      <div class="logo-text">
+        <span class="brand">Formation VGP</span>
+        <span class="tagline">Certifié Qualiopi</span>
+      </div>
+    </a>
+
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li class="nav-item-dropdown">
+        <a href="#nos-formations"><span>Nos formations</span></a>
+        <div class="nav-dropdown">
+          <a href="formation-cqp.html">
+            <div class="nd-icon blue">🔧</div>
+            <div class="nd-info">
+              <div class="nd-title">CQP Agent de maintenance</div>
+              <div class="nd-sub">Manutention / Levage – RNCP41332</div>
+            </div>
+          </a>
+          <a href="formation-pack.html">
+            <div class="nd-icon orange">🏢</div>
+            <div class="nd-info">
+              <div class="nd-title">Pack Bureau de Contrôle</div>
+              <div class="nd-sub">1 semaine intensive – VGP + Micro-entreprise</div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li><a href="#notre-organisme">Notre organisme</a></li>
+      <li><a href="#qualite-labels">Qualité &amp; Labels</a></li>
+      <li><a href="#temoignages">Avis stagiaires</a></li>
+      <li><a href="#contact" class="nav-cta">Nous contacter</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Bienvenue chez Formation VGP">
+    <div class="hero-split">
+      <!-- Texte gauche -->
+      <div class="hero-left">
+        <div class="hero-pretag">🏅 Organisme certifié Qualiopi</div>
+        <h1>Spécialiste des formations<br>en <em>manutention</em> &amp; <em>levage</em></h1>
+        <p class="hero-sub">Des formateurs issus du terrain, des certifications reconnues, des financements CPF disponibles. Formation VGP vous accompagne jusqu'à votre réussite.</p>
+        <div class="hero-btns">
+          <a href="#nos-formations" class="btn-primary">▶ Voir nos formations</a>
+          <a href="#contact" class="btn-secondary">Nous contacter</a>
+        </div>
+        <div class="hero-trust">
+          <span>✓ Certifié Qualiopi</span>
+          <span>✓ Éligible CPF</span>
+          <span>✓ RNCP41332</span>
+          <span>✓ Réponse sous 24h</span>
+        </div>
+      </div>
+      <!-- Panneau droite -->
+      <div class="hero-panel">
+        <div class="hp-stat">
+          <span class="hp-n">97%</span>
+          <span class="hp-label">De stagiaires satisfaits</span>
+        </div>
+        <div class="hp-divider"></div>
+        <div class="hp-stat">
+          <span class="hp-n">100%</span>
+          <span class="hp-label">Taux d'obtention de certification</span>
+        </div>
+        <div class="hp-divider"></div>
+        <div class="hp-stat">
+          <span class="hp-n">89%</span>
+          <span class="hp-label">Taux d'insertion professionnelle</span>
+        </div>
+        <div class="hp-divider"></div>
+        <div class="hp-formations">
+          <a href="formation-cqp.html" class="hp-form-item" style="text-decoration:none">
+            <span class="hp-form-icon">🔧</span>
+            <div>
+              <div class="hp-form-name">CQP Agent de maintenance</div>
+              <div class="hp-form-sub">28 semaines · Éligible CPF à 100%</div>
+            </div>
+          </a>
+          <a href="formation-pack.html" class="hp-form-item" style="text-decoration:none">
+            <span class="hp-form-icon">🏢</span>
+            <div>
+              <div class="hp-form-name">Pack Bureau de Contrôle</div>
+              <div class="hp-form-sub">1 semaine · CPF partiel disponible</div>
+            </div>
+          </a>
+        </div>
+        <a href="#nos-formations" class="hp-cta">Découvrir les programmes →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-section" role="region" aria-label="Indicateurs qualité">
+    <div class="stats-inner">
+      <div class="stat-col">
+        <div class="stat-big">97%</div>
+        <div class="stat-line"></div>
+        <div class="stat-label">De stagiaires satisfaits<br>par nos formations</div>
+      </div>
+      <div class="stat-col">
+        <div class="stat-big">89%</div>
+        <div class="stat-line"></div>
+        <div class="stat-label">De taux de réussite<br>aux évaluations</div>
+      </div>
+      <div class="stat-col">
+        <div class="stat-big">100%</div>
+        <div class="stat-line"></div>
+        <div class="stat-label">De réussite<br>aux tests</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOS FORMATIONS -->
+  <section id="nos-formations" aria-labelledby="nf-title">
+    <div class="section-inner">
+      <div class="section-label">Nos formations</div>
+      <h2 id="nf-title">Deux parcours, deux objectifs</h2>
+      <p class="section-sub">Choisissez la formation adaptée à votre projet professionnel. Nos équipes vous accompagnent dans vos démarches de financement.</p>
+      <div class="formations-grid">
+        <div class="form-card">
+          <div class="form-card-header h-blue">
+            <div class="fc-tag">Certification nationale – RNCP41332</div>
+            <h3>CQP Agent de maintenance<br>de matériels de manutention/levage</h3>
+            <p class="fc-desc">Parcours certifiant de 3 semaines alliant théorie en centre et immersion terrain. Certification reconnue au Niveau 3 de la branche Métallurgie.</p>
+          </div>
+          <div class="form-card-body">
+            <div class="fc-row">
+              <div class="fc-info"><div class="fc-label">Durée</div><div class="fc-val">105 h</div></div>
+              <div class="fc-info"><div class="fc-label">Tarif</div><div class="fc-val">4 500 € TTC</div></div>
+              <div class="fc-info"><div class="fc-label">Format</div><div class="fc-val">Présentiel + terrain</div></div>
+            </div>
+            <div class="fc-tags">
+              <span class="fc-pill cpf">✓ CPF éligible à 100%</span>
+              <span class="fc-pill qualiopi">Qualiopi</span>
+              <span class="fc-pill ncpf">Niveau 3</span>
+            </div>
+            <ul class="fc-highlights">
+              <li>Certification professionnelle reconnue nationalement</li>
+              <li>Stage terrain en conditions réelles chez un partenaire agréé</li>
+              <li>Blocs de compétences capitalisables séparément</li>
+              <li>Financement CPF à 100 % possible</li>
+            </ul>
+            <a href="formation-cqp.html" class="fc-cta blue">Découvrir la formation →</a>
+          </div>
+        </div>
+        <div class="form-card">
+          <div class="form-card-header h-orange">
+            <div class="fc-tag">Pack – 2 formations en 1 semaine</div>
+            <h3>Lancez votre bureau de contrôle<br>en 1 semaine intensive</h3>
+            <p class="fc-desc">Deux formations combinées pour acquérir les bases essentielles et démarrer rapidement votre activité de vérificateur VGP indépendant.</p>
+          </div>
+          <div class="form-card-body">
+            <div class="fc-row">
+              <div class="fc-info"><div class="fc-label">Durée</div><div class="fc-val">42 h</div></div>
+              <div class="fc-info"><div class="fc-label">Budget total</div><div class="fc-val">1 950 € TTC</div></div>
+              <div class="fc-info"><div class="fc-label">Format</div><div class="fc-val">Présentiel</div></div>
+            </div>
+            <div class="fc-tags">
+              <span class="fc-pill cpf">CPF jusqu'à 1 500 €</span>
+              <span class="fc-pill qualiopi">Qualiopi</span>
+              <span class="fc-pill ncpf">RS 7005</span>
+            </div>
+            <ul class="fc-highlights">
+              <li>2 formations en 1 semaine : micro-entreprise + VGP</li>
+              <li>Idéal pour démarrer rapidement son activité</li>
+              <li>Formation micro-entreprise financée par CPF*</li>
+              <li>Opérationnel dès la fin de la semaine</li>
+            </ul>
+            <a href="formation-pack.html" class="fc-cta orange">Découvrir la formation →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTRE ORGANISME -->
+  <section id="notre-organisme" aria-labelledby="org-title">
+    <div class="section-inner">
+      <div class="organisme-grid">
+        <div class="organisme-left">
+          <div class="section-label">Notre organisme</div>
+          <h2 id="org-title">Spécialisés dans les formations en manutention et levage</h2>
+          <p>Formation VGP est un organisme de formation spécialisé dans la maintenance des équipements de manutention et de levage : chariots élévateurs, nacelles élévatrices, ponts roulants, portiques et grues.</p>
+          <p>Notre approche conjugue rigueur réglementaire et proximité terrain. Nos formateurs sont des professionnels issus du secteur, qui transmettent des savoirs directement applicables en situation de travail réelle.</p>
+          <p>Certifié Qualiopi, nous garantissons une formation de qualité conforme aux exigences des financeurs (CPF, OPCO, France Travail) et aux référentiels de compétences RNCP.</p>
+        </div>
+        <div class="organisme-right">
+          <div class="atout-card">
+            <div class="atout-icon">🎓</div>
+            <div class="atout-title">Expertise reconnue</div>
+            <div class="atout-text">Formateurs praticiens issus du secteur de la maintenance industrielle et du levage, avec une expérience terrain significative.</div>
+          </div>
+          <div class="atout-card">
+            <div class="atout-icon">📋</div>
+            <div class="atout-title">Conformité réglementaire</div>
+            <div class="atout-text">Programmes alignés sur le Code du travail, les arrêtés VGP et les référentiels RNCP. Rapports et traçabilité inclus.</div>
+          </div>
+          <div class="atout-card">
+            <div class="atout-icon">💶</div>
+            <div class="atout-title">Accompagnement CPF</div>
+            <div class="atout-text">Notre équipe vous guide dans toutes vos démarches de financement CPF, OPCO ou France Travail, de A à Z.</div>
+          </div>
+          <div class="atout-card">
+            <div class="atout-icon">📍</div>
+            <div class="atout-title">Ancré dans le territoire</div>
+            <div class="atout-text">Basé à Fourques (30), nous intervenons en région Occitanie et pouvons nous déplacer sur site selon les besoins.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALITÉ & LABELS -->
+  <section id="qualite-labels" aria-labelledby="qualiopi-title">
+    <div class="section-inner">
+      <div class="quali-inner">
+        <div class="quali-left">
+          <div class="section-label" style="color:var(--orange);">Certification qualité</div>
+          <h2 id="qualiopi-title" style="color:var(--white);">Un organisme certifié<br>Qualiopi</h2>
+          <p>La certification Qualiopi atteste de la qualité du processus mis en œuvre par notre organisme. Elle est obligatoire pour accéder aux financements publics et mutualisés : CPF, OPCO, France Travail.</p>
+          <div class="quali-badge-row">
+            <div class="quali-mark">QUALI<br>OPI</div>
+            <div>
+              <div class="quali-mark-text">QUALIOPI</div>
+              <div class="quali-detail">Certification qualité délivrée<br>pour la catégorie <strong>Actions de formation</strong><br>Numéro : 1079 – CW202424-2079</div>
+            </div>
+          </div>
+        </div>
+        <div class="quali-right">
+          <h3>📄 Notre certificat Qualiopi</h3>
+          <p>Téléchargez notre attestation de certification officielle pour vérifier notre accréditation ou l'intégrer à votre dossier de financement.</p>
+          <a href="Certificat_Qualiopi_FormationVGP.pdf" download class="dl-btn">
+            ⬇ &nbsp;Télécharger le certificat
+          </a>
+          <div class="dl-sub">Format PDF · Certification officielle</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ILS NOUS FONT CONFIANCE -->
+  <section id="temoignages" aria-labelledby="temo-title">
+    <div class="section-inner">
+      <div class="section-label">Avis stagiaires</div>
+      <h2 id="temo-title">Ce que disent nos stagiaires</h2>
+      <p class="section-sub">Des parcours qui transforment des projets en réalités professionnelles.</p>
+      <div class="temoignages-grid">
+        <div class="temoignage-card">
+          <div class="temo-stars">★★★★★</div>
+          <p class="temo-text">Formation très complète, les formateurs maîtrisent parfaitement leur métier et savent transmettre. Le stage terrain m'a vraiment mis en situation réelle. J'ai décroché mon poste en maintenance industrielle trois semaines après la fin du parcours.</p>
+          <div class="temo-footer">
+            <div class="temo-avatar av1">JP</div>
+            <div><div class="temo-name">Jean-Pierre M.</div><div class="temo-formation">CQP Agent de maintenance – 2023</div></div>
+          </div>
+        </div>
+        <div class="temoignage-card">
+          <div class="temo-stars">★★★★★</div>
+          <p class="temo-text">Grâce au pack Bureau de Contrôle, j'ai pu créer ma micro-entreprise et démarrer mon activité de vérificateur VGP en moins d'un mois. La formation est claire, concrète, et l'équipe est très disponible. Un vrai tremplin pour se lancer rapidement.</p>
+          <div class="temo-footer">
+            <div class="temo-avatar av2">AT</div>
+            <div><div class="temo-name">Amandine T.</div><div class="temo-formation">Pack Bureau de Contrôle – 2025</div></div>
+          </div>
+        </div>
+        <div class="temoignage-card">
+          <div class="temo-stars">★★★★★</div>
+          <p class="temo-text">Formation financée à 100 % par mon CPF. L'équipe de Formation VGP m'a accompagné dans toutes les démarches administratives, je n'ai eu qu'à me concentrer sur l'apprentissage. Aujourd'hui en CDI dans une entreprise de maintenance de ponts roulants.</p>
+          <div class="temo-footer">
+            <div class="temo-avatar av3">KB</div>
+            <div><div class="temo-name">Karim B.</div><div class="temo-formation">CQP Agent de maintenance – 2024</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="section-inner">
+      <div class="section-label" style="color:var(--orange);">Contact</div>
+      <h2 id="contact-title">Démarrez votre parcours</h2>
+      <p class="section-sub">Notre équipe vous répond sous 24h et vérifie votre éligibilité CPF gratuitement.</p>
+      <div class="contact-layout">
+        <form class="contact-form" action="#" method="post" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="prenom">Prénom *</label><input type="text" id="prenom" name="prenom" placeholder="Jean" required autocomplete="given-name"></div>
+            <div class="form-group"><label for="nom">Nom *</label><input type="text" id="nom" name="nom" placeholder="Dupont" required autocomplete="family-name"></div>
+          </div>
+          <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" placeholder="jean.dupont@email.com" required autocomplete="email"></div>
+          <div class="form-group"><label for="tel">Téléphone</label><input type="tel" id="tel" name="tel" placeholder="06 XX XX XX XX" autocomplete="tel"></div>
+          <div class="form-group">
+            <label for="formation">Formation souhaitée</label>
+            <select id="formation" name="formation">
+              <option value="" disabled selected>Sélectionnez</option>
+              <option>CQP Agent de maintenance (RNCP41332)</option>
+              <option>Pack Bureau de Contrôle</option>
+              <option>Renseignements généraux</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="Votre question, projet CPF, dates souhaitées…"></textarea></div>
+          <p class="form-rgpd">Données utilisées uniquement pour traiter votre demande.</p>
+          <button type="submit" class="form-submit">Envoyer ma demande →</button>
+        </form>
+        <div class="contact-infos">
+          <div class="ci-item"><div class="ci-icon">📍</div><div><div class="ci-label">Adresse</div><div class="ci-val">24 Rue Barthélemy Contestin<br>30300 Fourques</div></div></div>
+          <div class="ci-item"><div class="ci-icon">✉️</div><div><div class="ci-label">Email</div><div class="ci-val"><a href="mailto:contact@formation-vgp.com">contact@formation-vgp.com</a></div></div></div>
+          <div class="ci-item"><div class="ci-icon">🕒</div><div><div class="ci-label">Horaires</div><div class="ci-val">Lundi – Vendredi : 9h – 18h<br>Réponse sous 24h</div></div></div>
+          <div style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.28);border-radius:10px;padding:16px;">
+            <p style="font-size:.82rem;color:rgba(255,255,255,.8);">💡 <strong style="color:var(--orange);">Vérifiez votre solde CPF</strong><br>
+            <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" style="color:var(--orange)">moncompteformation.gouv.fr</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="b">Formation VGP</div>
+        <div class="t">Certifié Qualiopi</div>
+        <p>Organisme de formation spécialisé dans la maintenance de matériels de manutention et de levage.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Nos formations</h4>
+        <ul>
+          <li><a href="formation-cqp.html">CQP Agent de maintenance</a></li>
+          <li><a href="formation-pack.html">Pack Bureau de Contrôle</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Liens utiles</h4>
+        <ul>
+          <li><a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer">Mon Compte Formation</a></li>
+          <li><a href="https://www.francecompetences.fr/recherche/rncp/41332/" target="_blank" rel="noopener noreferrer">Fiche RNCP41332</a></li>
+          <li><a href="Certificat_Qualiopi_FormationVGP.pdf" download>Certificat Qualiopi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">CGV</a></li>
+          <li><a href="#">Confidentialité</a></li>
+          <li><a href="#">Règlement intérieur</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Formation VGP – SASU au capital de 5 000 € – SIRET : 928 123 496 00020 – TVA : FR50928123496 – Code APE : 85.59A – RCS Nîmes</p>
+      <div class="footer-qualiopi">Certifié <strong style="color:rgba(255,255,255,.7)">Qualiopi</strong> – Actions de Formation &nbsp;|&nbsp; RNCP41332 valide jusqu'au 24/09/2030<br>CPF éligible – <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer">moncompteformation.gouv.fr</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }));
+  document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('.form-submit');
+    btn.textContent = '✓ Message envoyé – réponse sous 24h';
+    btn.style.background = '#059669';
+    btn.disabled = true;
+  });
+</script>
+</body>
+</html>
