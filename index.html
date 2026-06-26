@@ -483,7 +483,10 @@
       <h2 id="contact-title">Démarrez votre parcours</h2>
       <p class="section-sub">Notre équipe est à votre disposition pour répondre à toutes vos questions.</p>
       <div class="contact-layout">
-        <form class="contact-form" action="#" method="post" novalidate>
+        <form class="contact-form" action="https://formsubmit.co/contact@formation-vgp.com" method="post">
+          <input type="hidden" name="_subject" value="Nouvelle demande – Formation VGP">
+          <input type="hidden" name="_next" value="https://alexandreansaldi.github.io/formation-vgp/index.html">
+          <input type="hidden" name="_captcha" value="false">
           <div class="form-row">
             <div class="form-group"><label for="prenom">Prénom *</label><input type="text" id="prenom" name="prenom" placeholder="Jean" required autocomplete="given-name"></div>
             <div class="form-group"><label for="nom">Nom *</label><input type="text" id="nom" name="nom" placeholder="Dupont" required autocomplete="family-name"></div>
@@ -546,13 +549,6 @@
     navLinks.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
   }));
-  document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('.form-submit');
-    btn.textContent = '✓ Message envoyé – nous vous répondrons rapidement';
-    btn.style.background = '#059669';
-    btn.disabled = true;
-  });
 </script>
 </body>
 </html>
