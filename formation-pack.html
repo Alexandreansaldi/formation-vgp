@@ -44,7 +44,7 @@
     /* HERO */
     .hero{background:linear-gradient(135deg,#7c2d12 0%,#b45309 50%,#d97706 100%);color:var(--white);padding:72px 24px 56px;position:relative;overflow:hidden}
     .hero::after{content:'';position:absolute;bottom:-80px;left:-80px;width:360px;height:360px;background:radial-gradient(circle,rgba(255,255,255,.06) 0%,transparent 70%);pointer-events:none}
-    .hero-inner{max-width:1200px;margin:0 auto;display:block;position:relative;z-index:1}
+    .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:center;position:relative;z-index:1}
     .hero h1{font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:900;line-height:1.15;margin-bottom:12px;color:var(--white)}
     .hero h1 em{font-style:normal;color:rgba(255,255,255,.9);text-decoration:underline;text-decoration-color:rgba(255,255,255,.3)}
     .hero-sub{font-size:.95rem;opacity:.88;margin-bottom:24px;max-width:500px;line-height:1.7}
@@ -297,8 +297,38 @@
           <a href="#formation" class="btn-secondary">Voir le programme</a>
         </div>
       </div>
+      <div class="hero-card">
+        <div class="hero-card-title">Ce pack comprend</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:9px;padding:14px;">
+            <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:4px;">Formation 1 – RS 7005</div>
+            <div style="font-size:.92rem;font-weight:700;color:var(--white);">Formation à la création de micro-entreprise</div>
+          </div>
+          <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:9px;padding:14px;">
+            <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:4px;">Formation 2 – VGP</div>
+            <div style="font-size:.92rem;font-weight:700;color:var(--white);">Formation VGP</div>
+          </div>
+          <div style="text-align:center;padding:12px;background:var(--orange);border-radius:9px;font-weight:800;font-size:.95rem;color:#0f2050;">Budget total : 1 950 € TTC</div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- STATS -->
+  <div class="stats-section" role="region" aria-label="Indicateurs qualité">
+    <div class="stats-inner" style="max-width:860px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);">
+      <div class="stat-col" style="text-align:left;padding:0 40px;border-right:1px solid var(--border)">
+        <div class="stat-big" style="font-size:clamp(2.6rem,4.5vw,3.8rem);font-weight:900;line-height:1;letter-spacing:-2px;">97%</div>
+        <div style="width:44px;height:3px;background:var(--blue-light);margin:10px 0"></div>
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--grey-dark);line-height:1.5">De stagiaires satisfaits<br>par nos formations</div>
+      </div>
+      <div class="stat-col" style="text-align:left;padding:0 40px;">
+        <div class="stat-big" style="font-size:clamp(2.6rem,4.5vw,3.8rem);font-weight:900;line-height:1;letter-spacing:-2px;">88%</div>
+        <div style="width:44px;height:3px;background:var(--blue-light);margin:10px 0"></div>
+        <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--grey-dark);line-height:1.5">Taux d'obtention<br>de certification</div>
+      </div>
+    </div>
+  </div>
 
   <!-- FORMATION DÉTAILLÉE -->
   <section id="formation" style="background:var(--grey-bg);" aria-labelledby="pack-title">
@@ -329,7 +359,7 @@
               <div class="pack-sub-header blue">
                 <div>
                   <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.65);margin-bottom:3px;">Formation 1 / RS 7005</div>
-                  <div class="pack-sub-title">Créer et développer sa micro-entreprise</div>
+                  <div class="pack-sub-title">Conduire un projet de création de micro-entreprise</div>
                 </div>
                 <span class="pack-sub-badge cpf">✓ CPF éligible – 1 500 €</span>
               </div>
@@ -374,7 +404,7 @@
                 <p style="font-size:.88rem;color:var(--grey-dark);line-height:1.75;margin-bottom:14px;">Cette formation est accessible après un parcours de formation continue.</p>
 
                 <div class="fm-section-title">Situation de handicap</div>
-                <p style="font-size:.88rem;color:var(--grey-dark);line-height:1.75;margin-bottom:14px;">Dans le cadre du respect du règlement d'examen, tout candidat peut saisir le référent handicap du certificateur pour aménager les modalités d'évaluation et obtenir l'assistance d'un tiers lors de l'évaluation.<br>Si votre situation nécessite des aménagements spécifiques (pédagogiques, matériels, techniques ou humains), n'hésitez pas à contacter notre référent handicap, Paul-Olivier Begoc, par mail à <a href="mailto:paul.begoc@creactifs.fr" style="color:var(--blue-light)">paul.begoc@creactifs.fr</a>.</p>
+                <p style="font-size:.88rem;color:var(--grey-dark);line-height:1.75;margin-bottom:14px;">Dans le cadre du respect du règlement d'examen, tout candidat peut saisir le référent handicap du certificateur pour aménager les modalités d'évaluation et obtenir l'assistance d'un tiers lors de l'évaluation. Si votre situation nécessite des aménagements spécifiques (pédagogiques, matériels, techniques ou humains), n'hésitez pas à nous contacter.</p>
 
                 <div class="fm-section-title">Date de délivrance et échéance</div>
                 <p style="font-size:.88rem;color:var(--grey-dark);line-height:1.75;margin-bottom:14px;">Cette formation prépare à la certification <em>Conduire un projet de création de micro-entreprise</em> enregistrée par CréActifs au répertoire spécifique de France Compétences suite à la décision du 31/01/2025 sous le numéro RS7005 et dont la date d'échéance de l'enregistrement est le 31/01/2027. Date de dernière délivrance possible de la certification : 21/07/2027.</p>
@@ -457,7 +487,8 @@
         <div class="bloc-card">
           <div class="bloc-header bc01">
             <div class="bloc-code">RS 7005 – Micro-entreprise</div>
-            <h3>Créer et développer sa micro-entreprise</h3>
+            <h3>Conduire un projet de création de micro-entreprise</h3>
+            <a href="https://www.francecompetences.fr/recherche/rs/7005/" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;font-size:.78rem;color:rgba(255,255,255,.85);font-weight:600;text-decoration:underline;">→ Fiche officielle France Compétences RS7005</a>
           </div>
           <div class="bloc-body">
             <div class="comp-item">Créer sa micro-entreprise et effectuer toutes les démarches administratives d'immatriculation</div>
@@ -487,7 +518,7 @@
     <div class="section-inner">
       <div class="section-label">Financement</div>
       <h2 id="fin-title">Comment financer votre formation</h2>
-      <p class="section-sub">Notre équipe vous accompagne dans vos démarches de prise en charge. Jusqu'à 1 500 € financés par le CPF.</p>
+      <p class="section-sub">Notre équipe vous accompagne dans vos démarches de prise en charge.</p>
       <div class="fin-grid">
         <div class="fin-card">
           <h3>CPF – Compte Personnel de Formation</h3>
@@ -549,7 +580,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <div class="b">Formation VGP</div>
-        <p>Organisme de formation spécialisé dans la maintenance de matériels de manutention et de levage.</p>
+        <p>Organisme de formation en maintenance de matériels de manutention et de levage.</p>
       </div>
       <div class="footer-col">
         <h4>Nos formations</h4>
@@ -561,7 +592,6 @@
     </div>
     <div class="footer-bottom">
       <p>© 2025 Formation VGP – SASU au capital de 5 000 € – SIRET : 928 123 496 00020 – TVA : FR50928123496 – Code APE : 85.59A – RCS Nîmes</p>
-      <div class="footer-qualiopi">CPF éligible – <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer">moncompteformation.gouv.fr</a></div>
     </div>
   </div>
 </footer>
