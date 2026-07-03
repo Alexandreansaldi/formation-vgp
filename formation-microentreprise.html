@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formation Conduire un projet de création de micro-entreprise (RS 7005) – Éligible CPF jusqu'à 1 500 €. 14 heures en e-learning. Certification CréActifs enregistrée France Compétences. Formation VGP.">
+  <title>Création de micro-entreprise – RS 7005 – Formation VGP</title>
+  <style>
+    :root{--blue-dark:#0f2050;--blue-main:#1a3a7c;--blue-light:#2563eb;--orange:#f59e0b;--white:#ffffff;--grey-bg:#f8fafc;--grey-mid:#94a3b8;--grey-dark:#334155;--text:#1e293b;--border:#e2e8f0;--radius:8px;--shadow:0 2px 16px rgba(15,32,80,.08)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Segoe UI',system-ui,sans-serif;color:var(--text);line-height:1.65;background:var(--white);font-size:15px}
+    .skip{position:absolute;top:-100%;left:0;background:var(--orange);color:var(--blue-dark);padding:10px 18px;font-weight:700;z-index:9999;text-decoration:none}
+    .skip:focus{top:0}
+    .access-bar{background:var(--blue-dark);color:rgba(255,255,255,.65);font-size:.76rem;padding:6px 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+    .access-bar a{color:var(--orange);text-decoration:none}
+    header{position:sticky;top:0;z-index:1000;background:var(--white);box-shadow:0 1px 10px rgba(15,32,80,.09)}
+    nav{max-width:1200px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
+    .logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .logo-icon{width:44px;height:44px;flex-shrink:0}
+    .logo-text .brand{font-size:1.15rem;font-weight:800;color:var(--blue-dark);line-height:1}
+    .nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+    .nav-links a{text-decoration:none;color:var(--grey-dark);font-weight:600;font-size:.86rem;transition:color .2s}
+    .nav-links a:hover{color:var(--blue-light)}
+    .nav-cta{background:var(--orange)!important;color:var(--blue-dark)!important;padding:9px 20px;border-radius:var(--radius);font-weight:700!important}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}
+    .hamburger span{display:block;width:25px;height:3px;background:var(--blue-dark);border-radius:2px}
+    .nav-item-dropdown{position:relative;padding-bottom:10px}
+    .nav-item-dropdown>a{display:flex;align-items:center;gap:5px}
+    .nav-item-dropdown>a::after{content:'▾';font-size:.65rem;margin-top:1px}
+    .nav-dropdown{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:var(--white);border-radius:10px;box-shadow:0 8px 28px rgba(15,32,80,.15);min-width:280px;padding:8px 0;z-index:200;border:1px solid var(--border)}
+    .nav-item-dropdown:hover .nav-dropdown,.nav-item-dropdown:focus-within .nav-dropdown{display:block}
+    .nav-dropdown a{display:flex;align-items:center;gap:10px;padding:11px 18px;font-size:.85rem;color:var(--grey-dark);border-bottom:1px solid var(--border);transition:background .15s}
+    .nav-dropdown a:last-child{border-bottom:none}
+    .nav-dropdown a:hover{background:var(--grey-bg);color:var(--blue-light)}
+    .nd-icon{width:32px;height:32px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+    .nd-icon.blue{background:rgba(37,99,235,.1)}
+    .nd-icon.orange{background:rgba(245,158,11,.12)}
+    .nd-icon.green{background:rgba(5,150,105,.1)}
+    .nd-info .nd-title{font-weight:700;font-size:.84rem;color:var(--blue-dark)}
+    .nd-info .nd-sub{font-size:.72rem;color:var(--grey-mid);margin-top:1px}
+    /* HERO */
+    .hero{background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue-main) 60%,#1e4db7 100%);color:var(--white);padding:72px 24px 56px;position:relative;overflow:hidden}
+    .hero::after{content:'';position:absolute;bottom:-80px;left:-80px;width:360px;height:360px;background:radial-gradient(circle,rgba(255,255,255,.06) 0%,transparent 70%);pointer-events:none}
+    .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:center;position:relative;z-index:1}
+    .hero h1{font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:900;line-height:1.15;margin-bottom:12px}
+    .hero-sub{font-size:.95rem;opacity:.88;margin-bottom:24px;max-width:500px;line-height:1.7}
+    .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:var(--blue-dark);padding:12px 26px;border-radius:var(--radius);font-weight:800;font-size:.92rem;text-decoration:none;box-shadow:0 4px 14px rgba(245,158,11,.35);transition:transform .2s}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-secondary{display:inline-flex;align-items:center;background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.35);color:var(--white);padding:10px 22px;border-radius:var(--radius);font-weight:700;font-size:.92rem;text-decoration:none}
+    .hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:26px}
+    .hero-card-title{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--orange);margin-bottom:16px}
+    .hero-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+    .hero-stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:9px;padding:12px;text-align:center}
+    .hero-stat .n{font-size:1.5rem;font-weight:900;color:var(--orange);line-height:1}
+    .hero-stat .l{font-size:.66rem;opacity:.7;margin-top:3px}
+    .cpf-badge{background:var(--orange);color:var(--blue-dark);border-radius:9px;padding:12px 16px;text-align:center;font-weight:800;font-size:.9rem;margin-top:4px}
+    /* SECTIONS */
+    section{padding:64px 24px}
+    section[id]{scroll-margin-top:80px}
+    .section-inner{max-width:1200px;margin:0 auto}
+    .section-label{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue-light);margin-bottom:6px}
+    h2{font-size:clamp(1.4rem,2vw,2rem);font-weight:800;color:var(--blue-dark);line-height:1.2;margin-bottom:10px}
+    .section-sub{font-size:.92rem;color:var(--grey-dark);max-width:640px;margin-bottom:36px;line-height:1.7}
+    /* FORMATION CONTENT */
+    .fm-header{background:linear-gradient(135deg,var(--blue-dark),var(--blue-main));color:var(--white);border-radius:12px 12px 0 0;padding:28px 32px}
+    .fm-rs{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.65);margin-bottom:6px}
+    .fm-title{font-size:1.45rem;font-weight:900;line-height:1.2;margin-bottom:10px;color:var(--white)}
+    .fm-desc{font-size:.88rem;opacity:.85;border-top:1px solid rgba(255,255,255,.2);padding-top:14px;margin-top:14px;line-height:1.7}
+    .fm-metas{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px}
+    .fm-meta{font-size:.8rem;opacity:.8;display:flex;align-items:center;gap:6px}
+    .fm-meta::before{content:'●';color:rgba(255,255,255,.5);font-size:.5rem}
+    .fm-content{background:var(--white);border:1px solid var(--border);border-top:none;border-radius:0 0 12px 12px;padding:32px}
+    .fm-section-title{font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--blue-main);margin:28px 0 14px;border-bottom:2px solid var(--blue-light);padding-bottom:6px}
+    .fm-section-title:first-child{margin-top:0}
+    .obj-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:4px}
+    .obj-list li{display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:var(--grey-dark);line-height:1.6}
+    .obj-list li::before{content:'⊙';color:var(--orange);font-size:1rem;flex-shrink:0;line-height:1.5}
+    .result-strip{background:linear-gradient(135deg,var(--blue-dark),var(--blue-main));color:var(--white);border-radius:9px;padding:18px 22px;margin-top:24px}
+    .result-strip .rl{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.75);margin-bottom:6px}
+    .result-strip p{font-size:.88rem;opacity:.9;line-height:1.7}
+    .pack-warning{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);border-radius:8px;padding:12px 16px;font-size:.84rem;color:#92400e;margin-top:18px;display:flex;gap:8px;align-items:flex-start}
+    /* FINANCEMENT */
+    #financement{background:var(--grey-bg)}
+    .fin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .fin-card{background:var(--white);border-radius:11px;padding:22px;box-shadow:var(--shadow);border-top:3px solid var(--orange)}
+    .fin-card h3{font-size:.9rem;font-weight:700;color:var(--blue-dark);margin-bottom:8px}
+    .fin-card p{font-size:.84rem;color:var(--grey-dark);line-height:1.65}
+    .fin-card a{color:var(--blue-light);text-decoration:none}
+    /* CONTACT */
+    #contact{background:linear-gradient(135deg,var(--blue-dark),var(--blue-main));color:var(--white)}
+    #contact h2{color:var(--white)}
+    #contact .section-sub{color:rgba(255,255,255,.75)}
+    .contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+    .contact-form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:28px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .form-group{margin-bottom:14px}
+    .form-group label{display:block;font-size:.8rem;font-weight:600;margin-bottom:5px;color:rgba(255,255,255,.82)}
+    .form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:10px 13px;color:var(--white);font-size:.9rem;font-family:inherit}
+    .form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.35)}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--orange)}
+    .form-group select option{background:var(--blue-dark)}
+    .form-group textarea{resize:vertical;min-height:90px}
+    .form-rgpd{font-size:.74rem;color:rgba(255,255,255,.48);margin-bottom:14px}
+    .form-submit{width:100%;background:var(--orange);color:var(--blue-dark);border:none;padding:13px;border-radius:var(--radius);font-weight:800;font-size:.92rem;cursor:pointer;font-family:inherit}
+    .contact-infos{display:flex;flex-direction:column;gap:18px}
+    .ci-item{display:flex;gap:13px}
+    .ci-icon{width:40px;height:40px;background:rgba(245,158,11,.13);border:1px solid rgba(245,158,11,.28);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+    .ci-label{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:2px}
+    .ci-val{font-size:.88rem;color:rgba(255,255,255,.86)}
+    .ci-val a{color:rgba(255,255,255,.86);text-decoration:none}
+    /* FOOTER */
+    footer{background:#070e1f;color:rgba(255,255,255,.5);padding:40px 24px 20px}
+    .footer-inner{max-width:1200px;margin:0 auto}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr;gap:32px;margin-bottom:32px}
+    .footer-brand .b{font-size:1.05rem;font-weight:800;color:var(--white)}
+    .footer-col h4{font-size:.74rem;font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+    .footer-col ul a{font-size:.82rem;color:rgba(255,255,255,.5);text-decoration:none}
+    .footer-col ul a:hover{color:var(--orange)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.74rem}
+    :focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:4px}
+    @media(max-width:1024px){
+      .hero-inner{grid-template-columns:1fr}
+      .hero-card{max-width:400px}
+      .fin-grid,.contact-layout{grid-template-columns:1fr}
+    }
+    @media(max-width:768px){
+      section{padding:48px 20px}
+      .hero{padding:56px 20px 44px}
+      .form-row{grid-template-columns:1fr}
+      .footer-top{grid-template-columns:1fr}
+      .footer-bottom{flex-direction:column}
+      .nav-links{display:none;flex-direction:column;gap:0;position:absolute;top:68px;left:0;right:0;background:white;box-shadow:0 8px 20px rgba(0,0,0,.1);padding:10px 0}
+      .nav-links.open{display:flex}
+      .nav-links li{padding:0 20px}
+      .nav-links a{display:block;padding:10px 0;border-bottom:1px solid #f1f5f9}
+      .hamburger{display:flex}
+      nav{position:relative}
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip">Aller au contenu principal</a>
+
+<div class="access-bar">
+  <span>✉ <a href="mailto:contact@formation-vgp.com">contact@formation-vgp.com</a></span>
+</div>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo-wrap" aria-label="Formation VGP – Accueil">
+      <svg class="logo-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0f2050"/><stop offset="100%" style="stop-color:#2563eb"/></linearGradient></defs>
+        <path d="M24 2 L43 13 L43 35 L24 46 L5 35 L5 13 Z" fill="url(#lg)"/>
+        <rect x="21" y="14" width="4" height="20" fill="white" rx="1"/>
+        <rect x="14" y="14" width="18" height="3" fill="white" rx="1.5"/>
+        <rect x="14" y="14" width="4" height="5" fill="#f59e0b" rx="1"/>
+        <line x1="27" y1="17" x2="27" y2="27" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M25 27 Q25 31 28 31 Q31 31 31 28" stroke="#f59e0b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <rect x="19" y="34" width="8" height="2" fill="white" rx="1"/>
+      </svg>
+      <div class="logo-text">
+        <span class="brand">Formation VGP</span>
+      </div>
+    </a>
+
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li class="nav-item-dropdown">
+        <a href="index.html#nos-formations">Nos formations</a>
+        <div class="nav-dropdown">
+          <a href="formation-cqp.html">
+            <div class="nd-icon blue">🔧</div>
+            <div class="nd-info">
+              <div class="nd-title">CQP Agent de maintenance</div>
+              <div class="nd-sub">Manutention / Levage – RNCP41332</div>
+            </div>
+          </a>
+          <a href="formation-pack.html">
+            <div class="nd-icon orange">🏢</div>
+            <div class="nd-info">
+              <div class="nd-title">Pack Bureau de Contrôle</div>
+              <div class="nd-sub">1 semaine intensive – Micro-entreprise + VGP</div>
+            </div>
+          </a>
+          <a href="formation-microentreprise.html">
+            <div class="nd-icon green">🏗️</div>
+            <div class="nd-info">
+              <div class="nd-title">Création de micro-entreprise</div>
+              <div class="nd-sub">RS 7005 – Éligible CPF 1 500 €</div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li><a href="#formation">Programme</a></li>
+      <li><a href="#financement">Financement</a></li>
+      <li><a href="#contact" class="nav-cta">Nous contacter</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Formation Création de micro-entreprise RS7005">
+    <div class="hero-inner">
+      <div>
+        <h1>Conduire un projet de création de micro-entreprise</h1>
+        <p class="hero-sub">Certification RS 7005 enregistrée au répertoire spécifique de France Compétences. Structurez votre projet, choisissez votre statut juridique, rédigez votre business plan et réalisez les démarches d'immatriculation.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">Demander des informations</a>
+          <a href="#formation" class="btn-secondary">Voir le programme</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-title">Infos clés</div>
+        <div class="hero-stat-grid">
+          <div class="hero-stat">
+            <div class="n">14h</div>
+            <div class="l">en e-learning</div>
+          </div>
+          <div class="hero-stat">
+            <div class="n">RS<br>7005</div>
+            <div class="l">Certification</div>
+          </div>
+          <div class="hero-stat">
+            <div class="n">8</div>
+            <div class="l">modules</div>
+          </div>
+          <div class="hero-stat">
+            <div class="n">3h</div>
+            <div class="l">en synchrone</div>
+          </div>
+        </div>
+        <div class="cpf-badge">✓ CPF éligible – 1 500 €</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMATION DÉTAILLÉE -->
+  <section id="formation" style="background:var(--grey-bg);" aria-labelledby="fm-title">
+    <div class="section-inner">
+
+      <div class="fm-header">
+        <div class="fm-rs">Certification RS 7005 – CréActifs / France Compétences</div>
+        <h2 class="fm-title" id="fm-title">Conduire un projet de création de micro-entreprise</h2>
+        <p class="fm-desc">La certification s'adresse aux entrepreneurs souhaitant concevoir et conduire un projet de création d'entreprise. Vous apprenez à structurer votre projet, préciser votre offre, choisir votre statut juridique, rédiger votre Business Plan et réaliser les démarches d'immatriculation.</p>
+        <div class="fm-metas">
+          <span class="fm-meta">14 heures – e-learning</span>
+          <span class="fm-meta">dont 3h en synchrone</span>
+          <span class="fm-meta">CPF éligible – 1 500 €</span>
+          <span class="fm-meta">RS 7005</span>
+        </div>
+      </div>
+
+      <div class="fm-content">
+
+        <div class="fm-section-title">Objectifs et contexte de la certification</div>
+        <p style="font-size:.88rem;color:var(--grey-dark);line-height:1.75;margin-bottom:10px;">La certification s'adresse aux entrepreneurs souhaitant concevoir et conduire un projet de création d'entreprise.</p>
+        <p style="font-size:.88rem;color:var(--grey-dark);line-height:1.75;margin-bottom:10px;">L'objectif de la certification est de valider les grandes étapes de la création d'entreprise du candidat : structurer son projet, préciser son offre, choisir son statut juridique, rédiger son Business Plan et réaliser les démarches d'immatriculation.</p>
+        <p style="font-size:.88rem;color:var(--grey-dark);line-height:1.75;margin-bottom:10px;">Conduire un projet de création d'entreprise demande de la méthode, il convient de valider les différentes étapes au fur et à mesure qu'elles sont accomplies et passer à la suivante. Brûler les étapes serait une erreur qui aura immanquablement des répercussions sur l'évolution du projet.</p>
+        <p style="margin:14px 0 20px;"><a href="https://www.francecompetences.fr/recherche/rs/7005/" target="_blank" rel="noopener noreferrer" style="color:var(--blue-light);font-weight:700;font-size:.9rem;">→ Consulter la fiche officielle France Compétences RS7005</a></p>
+
+        <div class="fm-section-title">Compétences attestées</div>
+        <ul class="obj-list" style="margin-bottom:14px;">
+          <li>Vérifier la cohérence de son projet de création d'entreprise en mesurant l'adéquation de ses propres compétences, de ses ambitions et contraintes personnelles avec les objectifs et l'envergure du projet de création d'entreprise afin de valider ou non sa faisabilité.</li>
+          <li>Réaliser des études quantitatives et qualitatives du marché ciblé en analysant les caractéristiques du cœur de cible (besoins, comportement d'achat, attentes, profil…) ainsi que de ses concurrents directs et indirects afin de positionner de façon optimale son concept.</li>
+          <li>Élaborer le Business Model du projet de création d'entreprise en définissant l'ensemble de ses composantes afin de le structurer et de l'utiliser comme outil de pilotage. Le candidat veillera à adapter son offre à un public en situation de handicap.</li>
+          <li>Choisir la forme juridique la plus adaptée au projet de création d'entreprise en tenant compte de ses avantages et de ses obligations (formalités de création, souplesse de gestion de l'entreprise au quotidien, régime fiscal et social, etc.) afin de lui donner une existence légale.</li>
+          <li>Évaluer la rentabilité financière de son projet de création d'entreprise, en estimant son chiffre d'affaires prévisionnel et en calculant les besoins financiers en termes d'investissements et de frais de fonctionnement afin de valider la faisabilité économique du projet.</li>
+          <li>Sélectionner les moyens de communication et réseaux sociaux les plus adaptés aux personae identifiés tout en définissant une ligne éditoriale cohérente afin de promouvoir sur le marché les offres portées par la future entreprise.</li>
+          <li>Analyser les différentes aides possibles à la création d'entreprise en identifiant les principaux dispositifs financiers et leurs conditions d'éligibilité afin de mettre en œuvre les démarches nécessaires.</li>
+          <li>Élaborer un argumentaire de présentation du projet de création d'entreprise en l'adaptant dans sa forme et dans son contenu en fonction des objectifs poursuivis et des interlocuteurs visés (avocats, comptables, banquiers, organismes publics d'aide, partenaires, investisseurs, fournisseurs, clients, etc…) afin de créer un impact positif et donner envie d'aller plus loin lors d'une présentation orale.</li>
+          <li>Identifier les différentes démarches d'immatriculation de l'entreprise en analysant les actions à mettre en œuvre auprès des organismes dédiés (Publication au journal officiel, rédaction des statuts, enregistrement INPI, cerfa M0/P0…) afin d'être en mesure de créer l'entreprise dans le respect des conditions légales.</li>
+        </ul>
+
+        <div class="fm-section-title">Programme de formation</div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:18px;">
+
+          <div style="background:var(--grey-bg);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:12px 16px;">
+            <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:4px;">Module 1</div>
+            <div style="font-size:.9rem;font-weight:700;color:var(--blue-dark);margin-bottom:5px;">Fondamentaux de l'entrepreneuriat et de la micro-entreprise</div>
+            <p style="font-size:.83rem;color:var(--grey-dark);line-height:1.6;margin:0;">Panorama du statut de micro-entrepreneur : avantages, limites, comparaison avec d'autres formes juridiques. Identifier si ce statut correspond à son projet et à sa situation personnelle.</p>
+          </div>
+
+          <div style="background:var(--grey-bg);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:12px 16px;">
+            <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:4px;">Module 2</div>
+            <div style="font-size:.9rem;font-weight:700;color:var(--blue-dark);margin-bottom:5px;">Créer sa micro-entreprise : démarches et immatriculation</div>
+            <p style="font-size:.83rem;color:var(--grey-dark);line-height:1.6;margin:0;">Étapes pratiques pour déclarer son activité en ligne, choisir son code APE, s'inscrire au registre compétent (INPI, URSSAF) et obtenir son numéro SIRET. Premiers réflexes administratifs après la création.</p>
+          </div>
+
+          <div style="background:var(--grey-bg);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:12px 16px;">
+            <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:4px;">Module 3</div>
+            <div style="font-size:.9rem;font-weight:700;color:var(--blue-dark);margin-bottom:5px;">Protection sociale et cotisations du micro-entrepreneur</div>
+            <p style="font-size:.83rem;color:var(--grey-dark);line-height:1.6;margin:0;">Comprendre le régime social spécifique au micro-entrepreneur : calcul des cotisations sociales, couverture maladie, retraite, prévoyance. Anticiper ses charges pour mieux piloter sa trésorerie.</p>
+          </div>
+
+          <div style="background:var(--grey-bg);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:12px 16px;">
+            <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:4px;">Module 4</div>
+            <div style="font-size:.9rem;font-weight:700;color:var(--blue-dark);margin-bottom:5px;">Fiscalité du régime micro-entrepreneur</div>
+            <p style="font-size:.83rem;color:var(--grey-dark);line-height:1.6;margin:0;">Fonctionnement du versement libératoire de l'impôt sur le revenu, déclaration du chiffre d'affaires, TVA et franchise de base. Comprendre ses obligations fiscales et les seuils à ne pas dépasser.</p>
+          </div>
+
+          <div style="background:var(--grey-bg);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:12px 16px;">
+            <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:4px;">Module 5</div>
+            <div style="font-size:.9rem;font-weight:700;color:var(--blue-dark);margin-bottom:5px;">Gestion administrative et comptable au quotidien</div>
+            <p style="font-size:.83rem;color:var(--grey-dark);line-height:1.6;margin:0;">Organiser ses déclarations mensuelles ou trimestrielles, tenir un livre de recettes, émettre des factures conformes, gérer ses paiements de cotisations. Outils simples pour suivre son activité sans expertise comptable.</p>
+          </div>
+
+          <div style="background:var(--grey-bg);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:12px 16px;">
+            <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:4px;">Module 6</div>
+            <div style="font-size:.9rem;font-weight:700;color:var(--blue-dark);margin-bottom:5px;">Aides financières disponibles pour les créateurs d'entreprise</div>
+            <p style="font-size:.83rem;color:var(--grey-dark);line-height:1.6;margin:0;">Recensement des dispositifs d'aide accessibles (ACRE, ARCE, prêts d'honneur, aides régionales). Conditions d'éligibilité, démarches de demande et impact sur les premières années d'activité.</p>
+          </div>
+
+          <div style="background:var(--grey-bg);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:12px 16px;">
+            <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:4px;">Module 7</div>
+            <div style="font-size:.9rem;font-weight:700;color:var(--blue-dark);margin-bottom:5px;">Définir et valoriser son offre de services ou de produits</div>
+            <p style="font-size:.83rem;color:var(--grey-dark);line-height:1.6;margin:0;">Structurer son offre commerciale, fixer ses tarifs, se différencier de la concurrence. Rédiger une proposition de valeur claire et rédiger un business plan synthétique adapté à la micro-entreprise.</p>
+          </div>
+
+          <div style="background:var(--grey-bg);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:12px 16px;">
+            <div style="font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:4px;">Module 8</div>
+            <div style="font-size:.9rem;font-weight:700;color:var(--blue-dark);margin-bottom:5px;">Développer son chiffre d'affaires et fidéliser ses clients</div>
+            <p style="font-size:.83rem;color:var(--grey-dark);line-height:1.6;margin:0;">Mettre en place une stratégie commerciale et marketing adaptée à son activité : prospection, réseaux sociaux, bouche-à-oreille, partenariats. Techniques concrètes pour trouver ses premiers clients et pérenniser son activité.</p>
+          </div>
+
+        </div>
+
+        <div class="fm-section-title">Modalités d'évaluation</div>
+        <p style="font-size:.88rem;color:var(--grey-dark);line-height:1.75;margin-bottom:14px;">Mise en situation professionnelle portant sur la conduite d'un projet de création d'entreprise avec remise d'un rapport écrit et soutenance orale.</p>
+
+        <div class="fm-section-title">Pré-requis</div>
+        <ul class="obj-list" style="margin-bottom:14px;">
+          <li>Tout public ayant un projet de création d'entreprise.</li>
+          <li>Maîtrise des outils bureautiques (traitement de texte, navigation internet, tableur).</li>
+          <li>Aisance dans le rédactionnel et le traitement de données chiffrées.</li>
+        </ul>
+
+        <div class="fm-section-title">Diagnostic de positionnement</div>
+        <p style="font-size:.88rem;color:var(--grey-dark);line-height:1.75;margin-bottom:14px;">Un diagnostic de positionnement est effectué par téléphone préalablement à toute inscription d'un candidat à la formation. Cet entretien permet de valider le profil du candidat et l'adéquation de la formation à ses besoins, de valider les pré-requis à l'entrée en formation, ainsi que de l'informer sur les modalités de passage de la certification.</p>
+
+        <div class="fm-section-title">Voie d'accès</div>
+        <p style="font-size:.88rem;color:var(--grey-dark);line-height:1.75;margin-bottom:14px;">Cette formation est accessible après un parcours de formation continue.</p>
+
+        <div class="fm-section-title">Situation de handicap</div>
+        <p style="font-size:.88rem;color:var(--grey-dark);line-height:1.75;margin-bottom:14px;">Dans le cadre du respect du règlement d'examen, tout candidat peut saisir le référent handicap du certificateur pour aménager les modalités d'évaluation et obtenir l'assistance d'un tiers lors de l'évaluation. Si votre situation nécessite des aménagements spécifiques (pédagogiques, matériels, techniques ou humains), n'hésitez pas à nous contacter.</p>
+
+        <div class="fm-section-title">Date de délivrance et échéance</div>
+        <p style="font-size:.88rem;color:var(--grey-dark);line-height:1.75;margin-bottom:14px;">Cette formation prépare à la certification <em>Conduire un projet de création de micro-entreprise</em> enregistrée par CréActifs au répertoire spécifique de France Compétences suite à la décision du 31/01/2025 sous le numéro RS7005 et dont la date d'échéance de l'enregistrement est le 31/01/2027. Date de dernière délivrance possible de la certification : 21/07/2027.</p>
+
+        <div class="pack-warning">
+          <span style="font-size:1rem;flex-shrink:0;">⚠️</span>
+          <span><strong>Important :</strong> Cette formation est éligible au CPF uniquement si vous souhaitez créer votre entreprise.</span>
+        </div>
+
+        <div class="result-strip" style="margin-top:24px;">
+          <div class="rl">Résultat à l'issue de la formation</div>
+          <p>Vous obtenez la certification <strong>Conduire un projet de création de micro-entreprise (RS7005)</strong>, enregistrée au répertoire spécifique de France Compétences par CréActifs. Vous disposez de toutes les clés pour créer, lancer et développer votre micro-entreprise en toute autonomie.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FINANCEMENT -->
+  <section id="financement" aria-labelledby="fin-title">
+    <div class="section-inner">
+      <div class="section-label">Financement</div>
+      <h2 id="fin-title">Comment financer cette formation</h2>
+      <p class="section-sub">Notre équipe vous accompagne dans vos démarches de prise en charge.</p>
+      <div class="fin-grid">
+        <div class="fin-card">
+          <h3>CPF – Compte Personnel de Formation</h3>
+          <p>Cette formation RS 7005 est finançable jusqu'à 1 500 € via votre CPF, sous réserve que vous souhaitiez créer votre entreprise. Consultez votre solde sur <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer">moncompteformation.gouv.fr</a>.</p>
+        </div>
+        <div class="fin-card">
+          <h3>OPCO – Opérateur de Compétences</h3>
+          <p>Prise en charge possible dans le cadre du plan de développement des compétences de votre entreprise. Contactez-nous pour identifier votre OPCO et vérifier votre éligibilité.</p>
+        </div>
+        <div class="fin-card">
+          <h3>France Travail</h3>
+          <p>Financement possible pour les demandeurs d'emploi via France Travail. Renseignez-vous auprès de votre conseiller ou contactez-nous pour être accompagné.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="section-inner">
+      <div class="section-label" style="color:var(--orange);">Contact</div>
+      <h2 id="contact-title">Démarrez votre projet de création d'entreprise</h2>
+      <p class="section-sub">Notre équipe est à votre disposition pour répondre à toutes vos questions.</p>
+      <div class="contact-layout">
+        <form class="contact-form" action="https://formsubmit.co/contact@formation-vgp.com" method="post">
+          <input type="hidden" name="_subject" value="Nouvelle demande – Formation Micro-entreprise RS7005">
+          <input type="hidden" name="_next" value="https://formation-vgp.com/formation-microentreprise.html">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="form-row">
+            <div class="form-group"><label for="prenom">Prénom *</label><input type="text" id="prenom" name="prenom" placeholder="Jean" required autocomplete="given-name"></div>
+            <div class="form-group"><label for="nom">Nom *</label><input type="text" id="nom" name="nom" placeholder="Dupont" required autocomplete="family-name"></div>
+          </div>
+          <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" placeholder="jean.dupont@email.com" required autocomplete="email"></div>
+          <div class="form-group"><label for="tel">Téléphone</label><input type="tel" id="tel" name="tel" placeholder="06 XX XX XX XX" autocomplete="tel"></div>
+          <div class="form-group">
+            <label for="situation">Votre situation *</label>
+            <select id="situation" name="situation" required>
+              <option value="" disabled selected>Sélectionnez</option>
+              <option>Salarié(e) souhaitant créer son entreprise</option>
+              <option>Demandeur(euse) d'emploi</option>
+              <option>Déjà micro-entrepreneur</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="Votre question, projet CPF, dates souhaitées…"></textarea></div>
+          <p class="form-rgpd">Données utilisées uniquement pour traiter votre demande.</p>
+          <button type="submit" class="form-submit">Envoyer ma demande →</button>
+        </form>
+        <div class="contact-infos">
+          <div class="ci-item"><div class="ci-icon">📍</div><div><div class="ci-label">Adresse</div><div class="ci-val">24 Rue Barthélemy Contestin<br>30300 Fourques</div></div></div>
+          <div class="ci-item"><div class="ci-icon">📞</div><div><div class="ci-label">Téléphone</div><div class="ci-val"><a href="tel:+33659937260">06 59 93 72 60</a></div></div></div>
+          <div class="ci-item"><div class="ci-icon">✉️</div><div><div class="ci-label">Email</div><div class="ci-val"><a href="mailto:contact@formation-vgp.com">contact@formation-vgp.com</a></div></div></div>
+          <div class="ci-item"><div class="ci-icon">🕒</div><div><div class="ci-label">Horaires</div><div class="ci-val">Lundi – Vendredi : 8h30 – 12h00 / 13h30 – 17h00</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="b">Formation VGP</div>
+      </div>
+      <div class="footer-col">
+        <h4>Nos formations</h4>
+        <ul>
+          <li><a href="formation-cqp.html">CQP Agent de maintenance</a></li>
+          <li><a href="formation-pack.html">Pack Bureau de Contrôle</a></li>
+          <li><a href="formation-microentreprise.html">Création de micro-entreprise</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Formation VGP – SASU au capital de 5 000 € – SIRET : 928 123 496 00020 – TVA : FR50928123496 – Code APE : 85.59A – RCS Nîmes</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+</body>
+</html>
